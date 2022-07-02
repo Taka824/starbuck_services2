@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'header', :media => "all"%>
+<div class="section">
+  <header class='page-header'>
+    <%= link_to root_path, class: 'logo' do %>
+      <%= image_tag 'starbuck.png', class: 'image' %>
+    <% end %>
+    <nav>
+      <ul class='main-nav'>
+        <li><%= link_to 'ログアウト', logout_path, class: 'li-content', method: :delete %></li>
+        <li><%= link_to 'みんなの投稿', login_path, class: 'li-content' %></li>
+        <li><%= link_to '使い方', login_path, class: 'li-content' %></li>
+        <li><%= link_to '投稿してみる', login_path, class: 'li-content' %></li>
+      </ul>
+    </nav>
+  </header>
+</div>
