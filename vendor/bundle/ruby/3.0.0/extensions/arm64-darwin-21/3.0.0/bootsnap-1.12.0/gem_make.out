@@ -1,0 +1,15 @@
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.12.0/ext/bootsnap
+/Users/suzukitakahiro/.rbenv/versions/3.0.3/bin/ruby -I /Users/suzukitakahiro/.rbenv/versions/3.0.3/lib/ruby/site_ruby/3.0.0 extconf.rb
+creating Makefile
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-cs3vx7 sitelibdir\=./.gem.20220702-37101-cs3vx7 clean
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-cs3vx7 sitelibdir\=./.gem.20220702-37101-cs3vx7
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.12.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-cs3vx7 sitelibdir\=./.gem.20220702-37101-cs3vx7 install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220702-37101-cs3vx7/bootsnap

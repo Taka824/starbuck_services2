@@ -1,0 +1,15 @@
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/suzukitakahiro/.rbenv/versions/3.0.3/bin/ruby -I /Users/suzukitakahiro/.rbenv/versions/3.0.3/lib/ruby/site_ruby/3.0.0 extconf.rb
+creating Makefile
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-ieaw9g sitelibdir\=./.gem.20220702-37101-ieaw9g clean
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-ieaw9g sitelibdir\=./.gem.20220702-37101-ieaw9g
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20220702-37101-ieaw9g sitelibdir\=./.gem.20220702-37101-ieaw9g install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20220702-37101-ieaw9g
