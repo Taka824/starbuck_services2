@@ -1,0 +1,15 @@
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/suzukitakahiro/.rbenv/versions/3.1.2/bin/ruby -I /Users/suzukitakahiro/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20220702-81592-uizzwd sitelibdir\=./.gem.20220702-81592-uizzwd clean
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20220702-81592-uizzwd sitelibdir\=./.gem.20220702-81592-uizzwd
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20220702-81592-uizzwd sitelibdir\=./.gem.20220702-81592-uizzwd install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20220702-81592-uizzwd/skiptrace/internal
