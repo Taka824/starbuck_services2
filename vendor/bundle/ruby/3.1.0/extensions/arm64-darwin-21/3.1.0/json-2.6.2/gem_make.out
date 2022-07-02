@@ -1,0 +1,13 @@
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/json-2.6.2/ext/json
+/Users/suzukitakahiro/.rbenv/versions/3.1.2/bin/ruby -I /Users/suzukitakahiro/.rbenv/versions/3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/json-2.6.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20220702-88704-nmu8kh sitelibdir\=./.gem.20220702-88704-nmu8kh clean
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/json-2.6.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20220702-88704-nmu8kh sitelibdir\=./.gem.20220702-88704-nmu8kh
+make: Nothing to be done for `all'.
+
+current directory: /Users/suzukitakahiro/workspace/runteq/starbuck_services2/vendor/bundle/ruby/3.1.0/gems/json-2.6.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20220702-88704-nmu8kh sitelibdir\=./.gem.20220702-88704-nmu8kh install
