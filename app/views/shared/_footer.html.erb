@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'footer', :media => "all"%>
+<footer class="footer">
+  <div class="logo">
+    <%= image_tag 'starbuck.png', class: 'image' %>
+    <span class=logo__My''>My</span>
+    <span class=logo__My''>Favorite</span>
+    <span class=logo__My''>Starbuck</span>
+    <nav class='footer_nav'>
+      <ul class="footer-nav">
+        <li><%= link_to 'プライバシーポリシー', login_path, class: 'footer__li__content' %></li>
+        <li><%= link_to '利用規約', login_path, class: 'footer__li__content' %></li>
+        <li><%= link_to 'お問い合せ', login_path, class: 'footer__li__content' %></li>
+      </ul>
+      <div class="footer__copyright">
+        &copy; 2022 My Favorite Starbuck
+      </div>
+    </nav>
+  </div>
+</footer>
