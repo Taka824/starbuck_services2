@@ -4,6 +4,11 @@
     <%= link_to root_path, class: 'logo' do %>
       <%= image_tag 'starbuck.png', class: 'image' %>
     <% end %>
+    <button class="mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
       <ul class='main-nav'>
         <li><%= link_to 'ログアウト', logout_path, class: 'li-content', method: :delete %></li>

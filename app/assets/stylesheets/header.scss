@@ -9,6 +9,11 @@
             margin-top: 14px;
         }
     }
+    .mobile-menu-icon{
+        overflow: hidden;
+        background-color: transparent;
+        border: none;
+    }
     nav{
         .main-nav{
             display: flex;
@@ -24,4 +29,45 @@
             }
         }
     }
+}
+
+@media(max-width: 620px){
+  nav{
+      display: none;
+  }
+  .mobile-menu-icon{
+      overflow: visible;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      & > span {
+          background-color: black;
+          color: black;
+          width: 35px;
+          height: 2px;
+          display: block;
+          margin-bottom: 9px;
+          transition: transform .7s;
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+  }
+  .menu-open {
+      background-color: black;
+      & .mobile-menu-icon{
+        & > span {
+            background-color: white;
+            &:nth-child(1) {
+                transform: translateY(11px) rotate(-405deg);
+            }
+            &:nth-child(2) {
+                transform: translateX(50px) scalex(0);
+            }
+            &:nth-child(3) {
+                transform: translateY(-11px) rotate(405deg);
+            }
+        }
+    }
+  }
 }
