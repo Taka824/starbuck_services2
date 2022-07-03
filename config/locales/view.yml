@@ -1,0 +1,31 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    logout: 'ログアウト'
+    everyone_post: 'みんなの投稿'
+    use: '使い方'
+    post: '投稿する'
+    post_content: '投稿内容'
+    register: '登録'
+    privacy: 'プライバシーポリシー'
+    rule: '利用規約'
+    contact: 'お問い合せ'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+  posts:
+    index:
+      title: '掲示板一覧'
+    new:
+      title: '掲示板作成'
+    bookmarks:
+      title: 'ブックマーク一覧'
+  profiles:
+    show:
+      title: 'プロフィール'

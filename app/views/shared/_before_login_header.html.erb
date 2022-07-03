@@ -11,11 +11,11 @@
     </button>
     <nav>
       <ul class='main-nav'>
-        <li><%= link_to 'ログイン', login_path, class: 'li-content' %></li>
-        <li><%= link_to 'みんなの投稿', login_path, class: 'li-content' %></li>
-        <li><%= link_to '使い方', login_path, class: 'li-content' %></li>
-        <li><%= link_to '投稿してみる', login_path, class: 'li-content' %></li>
-        <li><%= link_to '投稿内容', posts_path, class: 'li-content' %><li>
+        <li><%= link_to (t 'defaults.login'), login_path, class: 'li-content' %></li>
+        <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'li-content' %></li>
+        <li><%= link_to (t 'defaults.use'), "#", class: 'li-content' %></li>
+        <li><%= link_to (t 'defaults.post'), "#", class: 'li-content' %></li>
+        <li><%= link_to (t 'defaults.post_content'), "#", class: 'li-content' %><li>
       </ul>
     </nav>
   </header>
