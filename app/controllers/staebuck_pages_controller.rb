@@ -1,4 +1,5 @@
 class StaebuckPagesController < ApplicationController
-  def top
-  end
+  skip_before_action :require_login, only: %i[top]
+
+  def top; end
 end
