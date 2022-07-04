@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :posts, only: %i[index]
+  resources :categories, except: [:new, :show]
 end
