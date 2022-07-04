@@ -10,6 +10,8 @@ ja:
     privacy: 'プライバシーポリシー'
     rule: '利用規約'
     contact: 'お問い合せ'
+    edit: '編集'
+    delete: '削除'
   users:
     new:
       title: 'ユーザー登録'
@@ -29,11 +31,19 @@ ja:
       success: 'ログアウトしました'
   posts:
     index:
-      title: '掲示板一覧'
+      title: '投稿一覧'
     new:
-      title: '掲示板作成'
+      title: '投稿作成'
     bookmarks:
       title: 'ブックマーク一覧'
+  categories:
+    index:
+      title: 'カテゴリー作成、一覧表示（管理者専用サイト'
+      new: 'カテゴリー作成'
+      index: 'カテゴリー、一覧表示'
+      posts_index: '投稿一覧'
+    edit:
+      title: 'カテゴリー編集'
   profiles:
     show:
       title: 'プロフィール'

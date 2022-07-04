@@ -1,0 +1,26 @@
+<div class="login__width">
+  <h1><%=t '.new' %></h1>
+    <%= form_with model: @category, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :name, User.human_attribute_name(:name), class: 'login__form' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="actions text-center login__button">
+        <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+</div>
+
+<h1><%=t '.index' %></h1>
+<% @categories.each do |category| %>
+  <tr>
+    <th><%= category.name %></th>
+    <td><%= link_to (t 'defaults.edit'),edit_category_path(category) %></td>
+    <td><%= link_to (t 'defaults.delete'),category_path(category),
+        method: :delete,data: {confirm:'削除してもいいですか？'}%></td><br>
+  </tr>
+<% end %>
+
+<h1><%=t '.posts_index' %></h1>
+<%= link_to (t 'defaults.everyone_post'), posts_path%>
+
