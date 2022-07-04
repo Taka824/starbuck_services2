@@ -15,4 +15,5 @@ Rails.application.config.assets.precompile += %w(
   header.scss
   footer.scss
   login.scss
+  cup.scsss
 )
