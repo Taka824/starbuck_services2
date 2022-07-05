@@ -12,6 +12,10 @@ ja:
     contact: 'お問い合せ'
     edit: '編集'
     delete: '削除'
+    message:
+      require_login: 'ログインしてください'
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
   users:
     new:
       title: 'ユーザー登録'

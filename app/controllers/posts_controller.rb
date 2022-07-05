@@ -9,9 +9,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.boards.build(board_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to boards_path, success: t('defaults.message.created', item: Post.model_name.human)
+      redirect_to posts_path, success: t('defaults.message.created', item: Post.model_name.human)
     else
       flash.now['danger'] = t('defaults.message.not_created', item: Post.model_name.human)
       render :new
@@ -25,6 +25,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :arrange_content, :price, :one_point)
   end
 end
