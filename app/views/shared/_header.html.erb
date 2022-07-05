@@ -15,6 +15,7 @@
         <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'li-content' %></li>
         <li><%= link_to (t 'defaults.use'), "#", class: 'li-content' %></li>
         <li><%= link_to (t 'defaults.post'), "#", class: 'li-content' %></li>
+        <%= link_to t('posts.new.title'), new_post_path, class: 'dropdown-item' %>
       </ul>
     </nav>
   </header>
