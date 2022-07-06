@@ -16,4 +16,7 @@ Rails.application.config.assets.precompile += %w(
   footer.scss
   login.scss
   cup.scsss
+  post__index.scss
+
+  post__index.js
 )
