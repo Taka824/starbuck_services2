@@ -1,29 +1,30 @@
 <%= stylesheet_link_tag 'login', :media => "all"%>
 <div class="login__width">
   <h1><%=t '.title' %></h1>
-  <%= form_with model: @user, local: true do |f| %>
-  <div class="form-group">
-    <%= f.label :name, class: 'login__form' %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :email, class: 'login__form' %>
-    <%= f.email_field :email, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password, class: 'login__form' %>
-    <%= f.password_field :password, class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation, class: 'login__form' %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-  </div>
-  <div class="actions text-center login__button">
-    <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
-  </div>
-  <% end %>
-  <div class='text-center'>
-    <%= link_to (t 'defaults.login'), login_path %>
-  </div>
+    <%= form_with model: @user, local: true do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+      <%= f.label :name, class: 'login__form' %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, class: 'login__form' %>
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, class: 'login__form' %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: 'login__form' %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+    </div>
+    <div class="actions text-center login__button">
+      <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
+    </div>
+    <% end %>
+    <div class='text-center'>
+      <%= link_to (t 'defaults.login'), login_path %>
+    </div>
 </div>
   
