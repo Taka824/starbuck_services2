@@ -16,6 +16,10 @@
     <%= f.label :one_point %>
     <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
   </div>
+  <div class="form-group">
+    <%= f.label :images %>
+    <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true %>
+  </div>
  
   <%= f.submit class: 'btn btn-primary' %>
   
