@@ -17,6 +17,7 @@ Rails.application.config.assets.precompile += %w(
   login.scss
   cup.scsss
   post__index.scss
-
   post__index.js
+  raty.js
+  star__post.js
 )

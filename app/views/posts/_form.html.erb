@@ -20,7 +20,13 @@
     <%= f.label :images %>
     <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true %>
   </div>
- 
+  <div class="form-group" id="star">
+    <%= f.label :evaluation,'評価 :', class:"" %>
+    <%= f.hidden_field :evaluation, id: :review_star %>
+  </div>
+
   <%= f.submit class: 'btn btn-primary' %>
   
 <% end %>
+<%= javascript_include_tag "star__post.js" %>
+
