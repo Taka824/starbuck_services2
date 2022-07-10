@@ -1,9 +1,12 @@
+<%= stylesheet_link_tag 'post', :media => "all"%>
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="post-id-<%= post.id %>">
     <div class="card">
-      <% post.images.each do |image| %>
-        <li><%= image_tag image.to_s %></li>
-      <% end %>
+      <div class="swipe">
+        <% post.images.each do |image| %>
+            <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
+        <% end %>
+      </div>
       <div class="card-body">
         <h4 class="card-title">
           <a href="#">
@@ -30,3 +33,4 @@
     </div>
   </div>
 </div>
+<%= javascript_include_tag "post.js" %>

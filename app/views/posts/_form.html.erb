@@ -18,21 +18,24 @@
   </div>
   <div class="form-group">
     <%= f.label :images %>
-    <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true %>
+    <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true, accept: 'image/*' %>
+    <% post.images.each do |image| %>
+      <%= hidden_field :post, :images, multiple: true, value: image.identifier %>
+    <% end %>
   </div>
   <div class="form-group" id="star">
     <%= f.label :evaluation,'評価 :', class:"" %>
     <%= f.hidden_field :evaluation, id: :review_star %>
     <script>
-$('#star').raty({
-  size     : 36,
-  starOff:  '<%= asset_path('star-off.png') %>',
-  starOn : '<%= asset_path('star-on.png') %>',
-  starHalf: '<%= asset_path('star-half.png') %>',
-  scoreName: 'post[evaluation]',   
-  half: true,
-});
-</script>
+      $('#star').raty({
+        size     : 36,
+        starOff:  '<%= asset_path('star-off.png') %>',
+        starOn : '<%= asset_path('star-on.png') %>',
+        starHalf: '<%= asset_path('star-half.png') %>',
+        scoreName: 'post[evaluation]',   
+        half: true,
+      });
+    </script>
 
   </div>
 
