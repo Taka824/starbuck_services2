@@ -10,8 +10,13 @@
             <ul class='header__ul'>
               <li><%= link_to (t 'defaults.logout'), logout_path, class: 'header__li', method: :delete %></li>
               <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
+              <li class="liquid-li">
+                <%= link_to(new_post_path, class: 'header-liquid-li') do %>
+                  <span class="liquid-span"><%= t('posts.new.title') %></span>
+                  <div class='liquid'></div>
+                <% end %>
+              </li>
               <li><%= link_to (t 'defaults.use'), "#", class: 'header__li' %></li>
-              <li><%= link_to t('posts.new.title'), new_post_path, class: 'header__li' %></li>
             </ul>
           </nav>
           <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
