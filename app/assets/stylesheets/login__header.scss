@@ -1,0 +1,112 @@
+.section{
+    padding-top: 100px;
+}
+.login-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+    .header__inner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .login-logo{
+            .image{
+                width: 60px;
+            }
+        }
+        .header__nav{
+            .header__ul{
+                display: flex;
+                .header__li{
+                    margin-left: 20px;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.login-mobile-menu-icon{
+    display: none;
+}
+
+@media(max-width: 620px){
+  .header__nav{
+    display: none;
+  }
+  .login-mobile-menu-icon{
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      & > span {
+          background-color: black;
+          color: black;
+          width: 35px;
+          height: 2px;
+          display: block;
+          margin-bottom: 9px;
+          transition: transform .7s;
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+  }
+  .menu-open {
+      & .header-container{
+        transform: translate(-110px, 40px);
+        box-shadow: 0 8px 40px -10px rgba(0,0,0,0.8);
+        
+      }
+      & .login-mobile-menu-icon{
+        & > span {
+            background-color: black;
+            &:nth-child(1) {
+                transform: translateY(11px) rotate(-405deg);
+            }
+            &:nth-child(2) {
+                transform: translateX(50px) scalex(0);
+            }
+            &:nth-child(3) {
+                transform: translateY(-11px) rotate(405deg);
+            }
+        }
+    }
+  }
+}
+
+.global-container{
+    .header-container {
+        position: relative;
+        transition: all 0.5s;
+        background-color: rgb(249, 255, 244);
+        z-index: 15;
+    }
+    .mobile-header__nav{
+        position: fixed;
+        right: 0;
+        top: 60px;
+        z-index: 1;
+        .mobile-header__ul{
+            padding: 0;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+            .mobile-header__li{
+                transform: translate3d(0, 0, -1000px);
+                transition: transform 0.3s, opacity 0.2s;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
