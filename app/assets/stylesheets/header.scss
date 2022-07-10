@@ -6,7 +6,7 @@
     .logo{
         .image{
             width: 60px;
-            margin-top: 14px;
+            
         }
     }
     .mobile-menu-icon{
@@ -14,8 +14,8 @@
         background-color: transparent;
         border: none;
     }
-    nav{
-        ul{
+    navi{
+        uli{
             display: flex;
             font-size: 1rem;
             list-style: none;
@@ -32,7 +32,7 @@
 }
 
 @media(max-width: 620px){
-  nav{
+  navi{
       display: none;
   }
   .mobile-menu-icon{
@@ -53,7 +53,7 @@
           }
       }
   }
-  .menu-open {
+  .menu-open-add {
       background-color: black;
       & .mobile-menu-icon{
         & > span {

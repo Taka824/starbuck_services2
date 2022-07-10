@@ -12,15 +12,25 @@
   </head>
 
   <body>
-    <div class="container">
-      <% if logged_in? %>
-        <%= render 'shared/header' %>
-      <% else %>
-        <%= render 'shared/before_login_header' %>
-      <% end %>
-      <%= render 'shared/flash' %>
-      <%= yield %>
-      <%= render 'shared/footer' %>
-    </div>
+  <div class="global-container">
+      <div class="header-container">
+        <% if logged_in? %>
+          <%= render 'shared/header' %>
+        <% else %>
+          <%= render 'shared/before_login_header' %>
+        <% end %>
+        <%= render 'shared/flash' %>
+        <%= yield %>
+        <%= render 'shared/footer' %>
+      </div>
+      <nav class="mobile-header__nav">
+      <ul class='mobile-header__ul'>
+        <li><%= link_to (t 'defaults.logout'), logout_path, class: 'mobile-header__li', method: :delete %></li>
+        <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'mobile-header__li' %></li>
+        <li><%= link_to (t 'defaults.use'), "#", class: 'mobile-header__li' %></li>
+        <li><%= link_to t('posts.new.title'), new_post_path, class: 'mobile-header__li' %></li>
+      </ul>
+  </nav>
+  </div>
   </body>
 </html>

@@ -13,6 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w(
   header.scss
+  login__header.scss
   footer.scss
   login.scss
   cup.scsss
@@ -22,4 +23,5 @@ Rails.application.config.assets.precompile += %w(
   raty.js
   star__post.js
   post.js
+  login__header.js
 )
