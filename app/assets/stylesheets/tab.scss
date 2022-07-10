@@ -1,0 +1,55 @@
+/*tabの形状*/
+.tab{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 100%;
+	padding-left: 0;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 1.2px 0.5px 1px rgba(0, 0, 0, 0.5);
+	li {
+		flex: 1 0 auto;
+		text-align: center;
+		a{
+		display: block;
+		margin:0 2px;
+		padding:10px 20px;
+		width: 100%;
+		text-decoration: none;
+		color: black;
+		}
+	}
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+	border-bottom:  1px solid rgb(36, 147, 36);
+	color: rgb(36, 147, 36);
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+	display: none;/*はじめは非表示*/
+	opacity: 0;/*透過0*/
+	background: #fff;
+	padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
