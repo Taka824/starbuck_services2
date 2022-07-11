@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 20 }
   enum role: { general: 0, admin: 1 }
   def own?(object)
-    id == object.user_id
+    object.user_id == id
   end
 end
 
