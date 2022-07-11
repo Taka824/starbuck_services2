@@ -1,0 +1,34 @@
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <!-- 掲示板内容 -->
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-3'>
+              <% @post.images.each do |image| %>
+                <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
+              <% end %>
+            </div>
+            <div class='col-md-9'>
+              <h3 class="d-inline"><%= @post.title %></h3>
+              <%= render 'crud_menus', post: @post %>
+              <ul class="list-inline">
+                <li class="list-inline-item">by <%= @post.user.name %></li>
+                <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
+              </ul>
+            </div>
+          </div>
+          <%= simple_format(@post.arrange_content) %>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- コメントフォーム -->
+  <%= render 'comments/form', { post: @post, comment: @comment } %>
+
+  <!-- コメントエリア -->
+  <%= render 'comments/comments', { comments: @comments } %>
+</div>

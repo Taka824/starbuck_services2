@@ -9,14 +9,9 @@
       </div>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">
-            <%= post.title %>
-          </a>
+          <%= link_to post.title, post_path(post) %>
         </h4>
-        <div class='mr10 float-right'>
-          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-          <a href="#"><%= icon 'fa', 'pen' %></a>
-        </div>
+        <%= render 'crud_menus', post: post %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>
