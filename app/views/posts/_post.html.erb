@@ -12,7 +12,11 @@
           <%= link_to post.title, post_path(post) %>
         </h4>
         <% unless current_user == nil then %>
-          <%= render 'crud_menus', post: post if current_user.own?(post) %>
+          <% if current_user.own?(post) %>
+            <%= render 'crud_menus', post: post %>
+          <% else  %>
+            <%= render 'like_button', post: post %>
+          <%  end %>
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
