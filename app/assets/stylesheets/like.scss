@@ -1,0 +1,13 @@
+.red-color{
+    color: #f9004d;
+    &:hover{
+        color: #ff6a99;
+    }
+}
+.like-count{
+    color: #f9004d;
+    &:hover{
+        color: #ff6a99;
+        text-decoration: none;
+    }
+}
