@@ -1,6 +1,35 @@
-.logo{
-    .image{
-        width: 60px;
-        margin-top: 14px;
+.footer{
+    .footer-box{
+        display: flex;
+        justify-content: space-around;
+        .logo{
+            .footer__image{
+                width: 60px;
+                margin-top: 14px;
+            }
+        }
+        .footer__nav{
+
+            .footer__ul{
+                margin-top: 30px;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+                list-style: none;
+                .footer__li__content{
+                    margin-left: 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .footer__copyright{
+        text-align: center;
+        margin: 20px 0;
     }
 }

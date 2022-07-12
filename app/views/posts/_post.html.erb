@@ -11,6 +11,7 @@
         <h4 class="card-title">
           <%= link_to post.title, post_path(post) %>
         </h4>
+          <div class="post-evaluation" data-score="<%= post.evaluation %>"></div>
         <% unless current_user == nil then %>
           <% if current_user.own?(post) %>
             <%= render 'crud_menus', post: post %>
@@ -33,3 +34,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('.post-evaluation').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
