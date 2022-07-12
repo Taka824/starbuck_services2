@@ -1,5 +1,6 @@
 .top-body{
     height: 100vh;
+    position: relative;
 }
 .cup__body{
     display: flex;
@@ -122,7 +123,16 @@
     opacity: 0;
     filter: blur(8px);
     animation-delay: calc(var(--i)* 0.5s);
-
+}
+.sentence1{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.sentence2{
+    position: absolute;
+    top: 15%;
+    right: 5%;
 }
 @keyframes animate{
     0%{

@@ -3,14 +3,14 @@
   <div class="footer-box">
     <div class="logo">
       <%= image_tag 'starbuck.png', class: 'footer__image' %>
-      <span class=logo__My''>My</span>
-      <span class=logo__My''>Favorite</span>
-      <span class=logo__My''>Starbuck</span>
+      <span class='logo__My'>My</span>
+      <span class='logo__My'>Favorite</span>
+      <span class='logo__My'>Starbuck</span>
     </div>
     <nav class='footer__nav'>
       <ul class="footer__ul">
-        <li><%= link_to (t 'defaults.privacy'), login_path, class: 'footer__li__content' %></li>
-        <li><%= link_to (t 'defaults.rule'), login_path, class: 'footer__li__content' %></li>
+        <li><%= link_to (t 'defaults.privacy'), page_path('term'), class: 'footer__li__content' %></li>
+        <li><%= link_to (t 'defaults.rule'), page_path('rule'), class: 'footer__li__content' %></li>
         <li><%= link_to (t 'defaults.contact'), login_path, class: 'footer__li__content' %></li>
       </ul>
     </nav>
