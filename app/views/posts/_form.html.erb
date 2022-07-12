@@ -26,20 +26,18 @@
   <div class="form-group" id="star">
     <%= f.label :evaluation,'評価 :', class:"" %>
     <%= f.hidden_field :evaluation, id: :review_star %>
-    <script>
-      $('#star').raty({
-        size     : 36,
-        starOff:  '<%= asset_path('star-off.png') %>',
-        starOn : '<%= asset_path('star-on.png') %>',
-        starHalf: '<%= asset_path('star-half.png') %>',
-        scoreName: 'post[evaluation]',   
-        half: true,
-      });
-    </script>
-
   </div>
-
   <%= f.submit class: 'btn btn-primary' %>
-  
 <% end %>
+
+<script>
+  $('#star').raty({
+     size     : 36,
+     starOff:  '<%= asset_path('star-off.png') %>',
+     starOn : '<%= asset_path('star-on.png') %>',
+     starHalf: '<%= asset_path('star-half.png') %>',
+     scoreName: 'post[evaluation]',   
+     half: true,
+   });
+</script>
 

@@ -1,26 +1,29 @@
 <%= stylesheet_link_tag 'login__header', :media => "all"%>
+<%= stylesheet_link_tag 'tab', :media => "all"%>
 <div class='header-trigger'></div>
-    <div class="section">
-      <header class='login-header'>
-        <div class='header__inner'>
-          <%= link_to root_path, class: 'login-logo' do %>
-            <%= image_tag 'starbuck.png', class: 'image' %>
-          <% end %>  
-          <nav class="header__nav">
-            <ul class='header__ul'>
-              <li><%= link_to (t 'defaults.login'), login_path, class: 'header__li' %></li>
-              <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
-              <li><%= link_to (t 'defaults.use'), "#", class: 'header__li' %></li>
-              <li><%= link_to (t 'defaults.post'), "#", class: 'header__li' %></li>
-              <li><%= link_to (t 'defaults.post_content'), "#", class: 'header__li' %><li>
-            </ul>
-          </nav>
-          <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </header>
-    </div>
+  <div class="section">
+    <header class='login-header'>
+      <div class='header__inner'>
+        <%= link_to root_path, class: 'login-logo' do %>
+          <%= image_tag 'starbuck.png', class: 'image' %>
+        <% end %>  
+        <nav class="header__nav">
+          <ul class='header__ul'>
+            <li><%= link_to (t 'defaults.login'), login_path, class: 'header__li' %></li>
+            <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
+            <li><%= link_to (t 'defaults.use'), "#", class: 'header__li' %></li>
+            <li><%= link_to (t 'defaults.post'), "#", class: 'header__li' %></li>
+            <li><%= link_to (t 'defaults.post_content'), "#", class: 'header__li' %><li>
+          </ul>
+        </nav>
+        <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+  
+</div>
 <%= javascript_include_tag "login__header.js" %>
+<%= javascript_include_tag "tab.js" %>

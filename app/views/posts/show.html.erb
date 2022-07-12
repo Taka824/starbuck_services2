@@ -19,6 +19,7 @@
                 <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
               </ul>
             </div>
+            <div class="post-evaluation" data-score="<%= @post.evaluation %>"></div>
           </div>
           <%= simple_format(@post.arrange_content) %>
         </div>
@@ -32,3 +33,12 @@
   <!-- コメントエリア -->
   <%= render 'comments/comments', { comments: @comments } %>
 </div>
+<script>
+  $('.post-evaluation').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>

@@ -26,9 +26,10 @@
         .header__nav{
             .header__ul{
                 display: flex;
+                list-style: none;
                     .header__li{
-                        margin-left: 20px;
                         text-decoration: none;
+                        margin-left: 20px;
                         color: black;
                     }
 
@@ -106,6 +107,7 @@
 //         transform: translate(-50%, -75%) rotate(360deg);
 //     }
 // }
+
 @media(max-width: 620px){
   .header__nav{
     display: none;
@@ -177,6 +179,7 @@
             padding: 0;
             perspective: 2000px;
             transform-style: preserve-3d;
+            list-style: none;
             .mobile-header__li{
                 transform: translate3d(0, 0, -1000px);
                 transition: transform 0.3s, opacity 0.2s;
