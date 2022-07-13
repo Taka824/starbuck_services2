@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
   before_action :find_post, only: [:edit, :update, :destroy]
   def index
-    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page]).per(1)
+    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page]).per(2)
   end
 
   def new
