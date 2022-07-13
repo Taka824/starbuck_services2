@@ -23,7 +23,7 @@
                   <div class='liquid'></div>
                 <% end %>
               </li>
-              <li><%= link_to (t 'defaults.use'), "#", class: 'header__li' %></li>
+              <%= link_to (t 'profiles.show.title'), profile_path, class: 'dropdown-item' %>
             </ul>
           </nav>
           <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">

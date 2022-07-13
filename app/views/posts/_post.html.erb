@@ -21,7 +21,7 @@
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= icon 'far', 'user' %>
+            <%= image_tag post.user.avatar.url , size: '20x20', class: 'rounded-circle' %>
             <%= post.user.name %>
           </li>
           <li class="list-inline-item">
