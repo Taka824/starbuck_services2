@@ -53,7 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "net-smtp"
 gem 'bootstrap'
-gem 'font-awesome-sass', '~> 5.12.0'
+gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'better_errors'
 gem 'sorcery', '0.16.3'
