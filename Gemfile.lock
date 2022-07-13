@@ -304,7 +304,7 @@ DEPENDENCIES
   byebug
   carrierwave
   faker
-  font-awesome-sass (~> 5.12.0)
+  font-awesome-sass
   high_voltage
   jbuilder (~> 2.7)
   jquery-rails

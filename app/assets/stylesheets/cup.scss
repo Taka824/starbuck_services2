@@ -125,11 +125,13 @@
     animation-delay: calc(var(--i)* 0.5s);
 }
 .sentence1{
+    color: #725951;
     position: absolute;
     top: 5%;
     left: 5%;
 }
 .sentence2{
+    color: #725951;
     position: absolute;
     top: 15%;
     right: 5%;
@@ -151,5 +153,78 @@
     }
     100%{
         transform: translateY(-300px) scale(10);
+    }
+}
+
+// section 3
+
+.hero_3{
+    width: 100%;
+    background-color: #f9fff4;
+    color: #725951;
+    .main{
+        width: 90%;
+        margin-bottom: 8vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 36px;
+        margin: 0px auto 30px auto;
+        padding: 40px 0 20px 0;
+    }
+
+    .card-body{
+        padding: 20px 35px;
+        background-color: #b6e8bb;
+        border: 1.5px solid #14795a;
+        color: #725951;
+        i {
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0;
+            color: #14795a;
+        }
+
+        h5 {
+            font-size: 23px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card-text{
+            color: #725951;
+            font-size: 16px;
+            line-height: 27px;
+            margin: 35px 0 35px 0;
+        }
+
+        .btn{
+            background-color: #14795a;
+            color: white;
+            font-weight: bold;
+            padding: 13px 30px;
+            transition: .4s;
+            border: 1.5px solid #14795a;
+        }
+        .btn:hover{
+            background-color: transparent;
+            cursor: pointer;
+            color: #725951;
+        }
+    }  
+}
+
+
+@media (max-width: 1000px){
+    .hero_3{
+        .main{
+            .card-box{
+                margin: 5px;
+            }
+        }
     }
 }
