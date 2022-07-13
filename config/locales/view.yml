@@ -49,5 +49,10 @@ ja:
     edit:
       title: 'カテゴリー編集'
   profiles:
-    show:
+     edit:
+      title: 'プロフィール編集'
+     show:
       title: 'プロフィール'
+      email: 'メールアドレス'
+      name: '氏名'
+      avatar: 'アバター'

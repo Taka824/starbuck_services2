@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   end
   resources :categories, except: [:new, :show]
   resources :likes, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
 end
