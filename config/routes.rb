@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   resources :categories, except: [:new, :show]
   resources :likes, only: %i[create destroy]
   resource :profile, only: %i[show edit update]
-  resources :password_resets, only: [:create, :edit, :update, :new]
+  resources :password_resets, only: %i[new create edit update]
 end
