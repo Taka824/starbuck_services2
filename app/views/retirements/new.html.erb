@@ -1,0 +1,5 @@
+<div class="container">
+  <h1>退会する</h1>
+  <div>退会した場合、ユーザに関するデータが全て削除されます</div>
+  <%= link_to "退会する", retirements_path, method: :post, remote: true, class: "btn btn-danger", data: {confirm: '本当に退化しますか？'} %>
+</div>
