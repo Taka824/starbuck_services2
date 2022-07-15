@@ -9,4 +9,20 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
+        avatar: 'ユーザ写真'
+      post:
+        title: 'アレンジしたメニューの名前をつけよう'
+        arrange_content: 'アレンジ内容'
+        price: '値段'
+        one_point: '一言'
+        images: '画像を貼ろう'
+        evaluation: '評価 : '
+      comment:
+        body: 'コメントする'
+  likes:
+    create:
+      success: 'いいね成功'
+    destroy:
+      success: 'いいね取り消し成功'
+        
       

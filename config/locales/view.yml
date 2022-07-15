@@ -14,8 +14,10 @@ ja:
     delete: '削除'
     message:
       require_login: 'ログインしてください'
-      created: "%{item}を作成しました"
-      not_created: "%{item}を作成できませんでした"
+      created: "作成しました"
+      not_created: "作成できませんでした"
+      updated: '更新しました'
+      not_updated: '更新できませんでした'
   users:
     new:
       title: 'ユーザー登録'
@@ -27,7 +29,7 @@ ja:
     new:
       title: 'ログイン'
       to_register_page: '登録ページへ'
-      password_forget: 'パスワードをお忘れの方はこちら'
+      to_password_forget_page: 'パスワードをお忘れの方はこちら'
     create:
       success: 'ログインしました'
       fail: 'ログインに失敗しました'
@@ -36,23 +38,39 @@ ja:
   posts:
     index:
       title: '投稿一覧'
+    likes:
+      title: 'いいね一覧'
     new:
-      title: '投稿作成'
+     title: '投稿作成'
+     arrange_content: 'アレンジ内容'
     bookmarks:
       title: 'ブックマーク一覧'
+    show:
+      title: '投稿の詳細'
+      body: 'コメント'
   categories:
     index:
-      title: 'カテゴリー作成、一覧表示（管理者専用サイト'
+      title: 'カテゴリー作成、一覧表示（管理者専用サイト)'
       new: 'カテゴリー作成'
       index: 'カテゴリー、一覧表示'
       posts_index: '投稿一覧'
     edit:
       title: 'カテゴリー編集'
   profiles:
-     edit:
+    edit:
       title: 'プロフィール編集'
-     show:
+    show:
       title: 'プロフィール'
       email: 'メールアドレス'
       name: '氏名'
-      avatar: 'アバター'
+      avatar: 'ユーザ写真'
+    create:
+      success: 'ユーザの編集に成功しました'
+      fail: 'ユーザの変更に失敗しました'
+  password_resets:
+      new:
+        title: 'パスワード再設定'
+        submit: '送信'
+      edit:
+        success: 'メールアドレスに送信しました'
+      
