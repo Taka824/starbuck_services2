@@ -2,6 +2,7 @@
 <div class="body">
   <div class="container pt-3">
     <div class="row">
+      <%= render 'search_form', url: likes_posts_path %>
       <div class="col-12">
         <div class="row">
           <% if @like_posts.present? %>

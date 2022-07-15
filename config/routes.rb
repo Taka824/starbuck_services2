@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     collection do
       get :likes
     end
+    collection do
+      get 'search'
+    end
   end
   resources :categories, except: [:new, :show]
   resources :likes, only: %i[create destroy]

@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
   before_action :find_post, only: [:edit, :update, :destroy]
   def index
-    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page]).per(2)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.includes(:user).order(created_at: :desc).page(params[:page]).per(2)
   end
 
   def new
@@ -42,7 +43,8 @@ class PostsController < ApplicationController
   end
 
   def likes
-    @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = current_user.like_posts.ransack(params[:q])
+    @like_posts = @q.result.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private

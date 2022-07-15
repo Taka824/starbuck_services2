@@ -5,6 +5,7 @@ ja:
     everyone_post: 'みんなの投稿'
     use: '使い方'
     post: '投稿する'
+    search_word: '検索ワード'
     post_content: '投稿内容'
     register: '登録'
     privacy: 'プライバシーポリシー'
@@ -38,8 +39,10 @@ ja:
   posts:
     index:
       title: '投稿一覧'
+      no_result: '何もありません'
     likes:
       title: 'いいね一覧'
+      no_result: 'いいねをまだつけていません'
     new:
      title: '投稿作成'
      arrange_content: 'アレンジ内容'
