@@ -18,6 +18,7 @@
           <td><%= image_tag current_user.avatar.url, size: '50x50', class: 'rounded-circle mr15' %></td>
         </tr>
       </table>
+      <%= link_to t('defaults.retirements'), new_retirement_path, class: 'btn btn-success float-right' %>
     </div>
   </div>
 </div>
