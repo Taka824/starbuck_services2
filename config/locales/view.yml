@@ -77,4 +77,9 @@ ja:
         submit: '送信'
       edit:
         success: 'メールアドレスに送信しました'
+        title: 'パスワード再設定'
+      create:
+        success: 'メールを送信しました'
+      update:
+        success: 'パスワード再設定に成功しました'
       
