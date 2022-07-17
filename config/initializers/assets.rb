@@ -22,6 +22,7 @@ Rails.application.config.assets.precompile += %w(
   post.scss
   tab.scss
   about.scss
+  dignose.scss
   post__index.js
   raty.js
   star__post.js
