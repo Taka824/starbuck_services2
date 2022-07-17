@@ -8,9 +8,9 @@
             <%= image_tag 'starbuck.png', class: 'image' %>
           <% end %>
           <ul class="tab">
-            <li><a href="#lunch"><span class="tab-span">ランチ</span></a></li>
-            <li><a href="#drink"><span class="tab-span">ドリンク</span></a></li>
-            <li><a href="#dinner"><span class="tab-span">ディナー</span></a></li>
+            <li><a href="#lunch"><span class="tab-span">みんなの投稿</span></a></li>
+            <li><a href="#drink"><span class="tab-span">記事</span></a></li>
+            <li><a href="#dinner"><span class="tab-span">今日の気分</span></a></li>
           </ul>  
           <nav class="header__nav">
             <ul class='header__ul'>
@@ -31,30 +31,16 @@
       </header>
 
       <div id="lunch" class="area">
-        <h2>ランチ</h2>
-        <ul>
-          <li>ガパオライス</li>
-          <li>ミートソーススパゲティ―</li>
-          <li>ハンバーグ定食</li>
-        </ul>
+        <h2>みんなの投稿</h2>
       </div>
 
       <div id="drink" class="area">
-        <h2>ドリンク</h2>
-        <ul>
-          <li>ウーロン茶</li>
-          <li>オレンジジュース</li>
-          <li>ジンジャーエール</li>
-        </ul>
+        <h2>記事</h2>
       </div>
 
       <div id="dinner" class="area">
-        <h2>ディナー</h2>
-        <ul>
-          <li>カレーライス</li>
-          <li>ドリア</li>
-          <li>グラタン</li>
-        </ul>
+        <h2>30秒診断しよう</h2>
+        <%= render 'dignose/index'%>
       </div>
   </div>
 <%= javascript_include_tag "login__header.js" %>

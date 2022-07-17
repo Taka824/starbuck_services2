@@ -1,0 +1,208 @@
+
+#qArea{
+	overflow:hidden;
+	width:700px;
+	height:500px;
+	background-image: image-url('back.png');
+	background-size:700px auto;
+	top:  0;                        
+	bottom:  0;                  
+    left:  0;                    
+    right:  0;  
+	margin: auto;
+}
+#qContainer {
+	margin:115px 0px 0px 50px;
+	width:4100px;
+	position:relative; 
+}
+.qBox {
+	width:600px;
+	margin:0px 50px 0px 0px;
+	height:350px;
+	float:left;
+}
+.ques{
+	padding: 10px 0px;
+	justify-content: center;
+	width:600px;
+	_width:600px;
+	background: #14795b;
+	border-radius: 10px;
+	color: white;
+	font-size: 20px;
+	text-align: centers;
+
+}
+.qNum{
+	color: #fff;
+}
+.fig{
+	width:240px;
+	height:260px;
+	margin: 0px 4px 0px 0px;
+	float:right;
+}
+
+.dig_ul{
+	list-style: none;
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float:left;
+	li {
+		padding: 17px 0px 0px 60px;
+		background-image: image-url('checkButton.png');
+		background-image: no-repeat 0 0;
+		width: 350px;
+		height: 50px;
+		_width: 350px;
+		_height: 50px;
+		cursor:pointer;
+		color:#333;
+	}
+}
+ul li:hover {
+	background-position: 0px -50px;
+}
+ul li.selected {
+	background-position: 0px -100px;
+	cursor:default;
+}
+
+#resultBox{
+	width:600px;
+	margin:0px 0px 0px 0px;
+	height:330px;
+	background-image: image-url('rsultBase.png');
+	background-size:600px auto;
+	background-image: no-repeat 0 0;
+}
+#resultTitle{
+	margin:44px 0px 0px 20px;
+	width:400px;
+	float:left;
+	font-size:18px;
+	height:18px;
+}
+#resultPoint{
+	margin:22px 40px 0px 0px;
+	float:right;
+	color:#F00;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:40px;
+	text-align:right;
+}
+#resultLeft{
+	float:left;
+	margin:20px 0px 0px 20px;
+}
+#resultText{
+	width:290px;
+	height:180px;
+	font-size:12px;
+	line-height:1.5;
+	color:#666;
+}
+#resultImage{
+	width:252px;
+	height:217px;
+	float:right;
+	margin:15px 20px 0px 0px;
+	background-image: image-url('lv4.png');
+}
+#againButton{
+	margin:0px 0px 0px 52px;
+	width:186px;
+	height:40px;
+	background-image: image-url('againButton.jpg');
+	cursor:pointer;
+}
+#againButton:hover{
+	background-position: 0px -40px;
+}
+// body{
+//     font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+//     font-size:16px;
+// }
+// #qArea{
+// 	overflow:hidden;
+// 	width:700px;
+// 	height:500px;
+// 	background: url(back.jpg) no-repeat 0 0;
+// }
+// #qContainer {
+//     margin:115px 0px 0px 50px;
+//     width:4100px;
+//     position:relative; 
+// }
+// .qBox {
+//     width:600px;
+//     margin:0px 50px 0px 0px;
+//     height:350px;
+//     float:left;
+// }
+// .ques{
+//     padding:35px 0px 0px 25px;
+//     width:575px;
+//     height:45px;
+//     _width:600px;
+//     _height:80px;
+//     background: url(quesArea.png) no-repeat 0 0;
+// }
+// .qNum{
+//     color:#3366FF;
+// }
+// .fig{
+//     width:240px;
+//     height:260px;
+//     margin: 0px 4px 0px 0px;
+//     float:right;
+// }
+
+
+// ul{
+//     list-style: none;
+//     margin: 0px 0px 0px 2px;
+//     padding: 0px;
+//     float:left;
+// }
+// ul li {
+//     padding: 17px 0px 0px 60px;
+//     background: url(button.png) no-repeat 0 0;
+//     width: 290px;
+//     height: 33px;
+//     _width: 350px;
+//     _height: 50px;
+//     cursor:pointer;
+//     color:#333;
+// }
+// ul li:hover {
+//     background-position: 0px -50px;
+// }
+// ul li.selected {
+//     background-position: 0px -50px;
+//     cursor:default;
+// }
+
+// // ul{
+// //     list-style: none;
+// //     margin: 0px 0px 0px 2px;
+// //     padding: 0px;
+// // }
+// // ul li {
+// //     padding: 17px 0px 0px 60px;
+// //     background: url(button.png) no-repeat 0 0;
+// //     width: 290px;
+// //     height: 33px;
+// //     _width: 350px;
+// //     _height: 50px;
+// //     cursor:pointer;
+// //     color:#333;
+// // }
+// // ul li:hover {
+// //     background-position: 0px -50px;
+// // }
+// // ul li.selected {
+// //     background-position: 0px -50px;
+// //     cursor:default;
+// // }
