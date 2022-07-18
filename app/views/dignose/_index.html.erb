@@ -66,20 +66,49 @@
                 <div id="resultTitle">実業家級サラリーマン</div>
                 <div id="resultPoint">15</div>
                 <div id="resultLeft">
-                    <div id="resultText">実業家級サラリーマンの説明文実業家級サラリーマンの説明文実業家級サラリーマンの説明文実業家級サラリーマンの説明文実業家級サラリーマンの説明文実業家級サラリーマンの説明文
-                    </div>
+                    <div id="resultText"></div>
                     <div id="againButton"></div>
                 </div>
                 <div id="resultImage"></div> 
             </div>
         </div>
-
+    </div>
+</div>
+<div class="result result80">
+    <% @post2 = Post.find(2) %>
+    <div class="card">
+      <div class="swipe">
+        <% @post2.images.each do |image| %>
+            <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
+        <% end %>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">
+          <%= link_to @post2.title, post_path(@post2) %>
+        </h4>
+          <div class="post-evaluation" data-score=<%= @post2.evaluation %>></div>
+          <%= render 'likes-2/like_button', post: @post2 %>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= image_tag @post2.user.avatar.url , size: '20x20', class: 'rounded-circle' %>
+            <%= @post2.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l @post2.created_at, format: :long %>
+          </li>
+          <li class="list-inline-item">
+            <%= @post2.category %>
+          </li>
+        </ul>
+      </div>
     </div>
 </div>
 
 
 
-<script>		
+<script>	
+    $(".result").hide();	
     //-----初期設定
     function initFunc(){
         selectArray = [-1,-1,-1,-1,-1];
@@ -126,6 +155,7 @@
         switch (true){
             case totalScore >= 80:
                 var lv = 4;
+                $(".result80").fadeIn();
                 break;
             case totalScore >= 60:
                 var lv = 3;
