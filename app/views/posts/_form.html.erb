@@ -17,6 +17,10 @@
     <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
+    <%= f.label :category, 'カテゴリー' %>
+    <%= f.select :category, {'あっさり系': "あっさり系", 'さっぱり系': 'さっぱり系','甘い系': '甘い系','カロリーオフ系': 'カロリーオフ系'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+  </div>
+  <div class="form-group">
     <%= f.label :images %>
     <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true, accept: 'image/*' %>
     <% post.images.each do |image| %>

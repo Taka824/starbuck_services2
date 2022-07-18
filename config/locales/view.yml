@@ -20,6 +20,7 @@ ja:
       not_created: "作成できませんでした"
       updated: '更新しました'
       not_updated: '更新できませんでした'
+      deleted: '削除しました'
   users:
     new:
       title: 'ユーザー登録'

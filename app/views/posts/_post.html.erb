@@ -28,8 +28,10 @@
             <%= icon 'far', 'calendar' %>
             <%= l post.created_at, format: :long %>
           </li>
+          <li class="list-inline-item">
+            <%= post.category %>
+          </li>
         </ul>
-        <p class="card-text"><%= post.title %></p> 
       </div>
     </div>
   </div>
