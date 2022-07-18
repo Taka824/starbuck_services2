@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
-    redirect_to boards_path, success: t('defaults.message.deleted', item: Post.model_name.human)
+    redirect_to posts_path, success: t('defaults.message.deleted', item: Post.model_name.human)
   end
 
   def likes
@@ -54,6 +54,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :arrange_content, :price, :one_point, { images: [] }, :images_cache, :evaluation)
+    params.require(:post).permit(:title, :arrange_content, :price, :one_point, { images: [] }, :images_cache, :evaluation, :category)
   end
 end
