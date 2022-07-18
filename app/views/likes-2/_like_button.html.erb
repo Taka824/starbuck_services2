@@ -1,0 +1,5 @@
+<% if current_user.like?(@post2)  %>
+  <%= render 'likes-2/unlike', { post: @post2 } %>
+<% else %>
+  <%= render 'likes-2/like', { post: @post2 } %>
+<% end %>
