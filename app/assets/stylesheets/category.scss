@@ -1,0 +1,48 @@
+.category-1{
+    border: 2px solid aquamarine;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: aquamarine;
+    color: white;
+    transition: 1s;
+     &:hover{
+         color: black;
+         background-color: transparent;
+    }
+}
+.category-2{
+    border: 2px solid rgb(127, 217, 255);
+    border-radius: 6px;
+    padding: 4px;
+    background-color: rgb(127, 217, 255);
+    color: white;
+    transition: 1s;
+     &:hover{
+         color: black;
+         background-color: transparent;
+    }
+}
+.category-3{
+    border: 2px solid rgb(255, 127, 206);
+    border-radius: 6px;
+    padding: 4px;
+    background-color: rgb(255, 127, 206);
+    color: white;
+    transition: 1s;
+     &:hover{
+         color: black;
+         background-color: transparent;
+    }
+}
+.category-4{
+    border: 2px solid rgb(127, 255, 136);
+    border-radius: 6px;
+    padding: 4px;
+    background-color: rgb(127, 255, 136);
+    color: white;
+    transition: 1s;
+     &:hover{
+         color: black;
+         background-color: transparent;
+    }
+}

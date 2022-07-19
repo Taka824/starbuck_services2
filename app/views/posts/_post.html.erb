@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'post', :media => "all"%>
+<%= stylesheet_link_tag 'category', :media => "all"%>
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="post-id-<%= post.id %>">
     <div class="card">
@@ -25,12 +26,17 @@
             <%= post.user.name %>
           </li>
           <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
             <%= l post.created_at, format: :long %>
           </li>
           <li class="list-inline-item">
             <% if post.category == "あっさり系" %>
-            <%= post.category %>
+              <span class = 'category category-1'><%= post.category %></span>
+            <% elsif post.category == "さっぱり系"%>
+              <span class = 'category category-2'><%= post.category %></span>
+            <% elsif post.category == "甘い系"%>
+              <span class = 'category category-3'><%= post.category %></span>
+            <% elsif post.category == "カロリーオフ系"%>
+              <span class = 'category category-4'><%= post.category %></span>
             <% end %>
           </li>
         </ul>
