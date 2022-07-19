@@ -4,7 +4,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:reset_password]
+Rails.application.config.sorcery.submodules = [:reset_password, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -80,7 +80,7 @@ Rails.application.config.sorcery.configure do |config|
   # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:twitter, :facebook]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -107,10 +107,14 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter will not accept any requests nor redirect uri containing localhost,
   # Make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = "gvjj1jSP4u0jaLuOLbZxzB9Bz"
+  config.twitter.secret = "vHoHw6E6DyvG3XocOSBGKJxaW519XvBrLg2pGa17lYyw1aBx41"
+  config.twitter.callback_url = "http://127.0.0.1:3000/oauth/callback"
+  config.twitter.user_info_mapping = {
+    name: 'My Favorite Starbucks',
+    description: 'This app was created to use the Twitter API.',
+    email: 'takahirotennis824@gmail.com'
+  }
   #
   # config.facebook.key = ""
   # config.facebook.secret = ""
@@ -508,7 +512,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`
