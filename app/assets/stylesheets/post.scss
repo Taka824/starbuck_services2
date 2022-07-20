@@ -1,3 +1,34 @@
 li{
     list-style: none;
 }
+.card-body{
+    background-color: #fffffe;
+    .yokonarabi-box{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        color: #007654;
+        .yokonarabi{
+            .post-title{
+                color: #007654;
+            }
+        }
+    }
+    .post-evaluation{
+        margin: 10px 0;
+    }
+    .post-one_point{
+        color: #007654;
+        margin: 10px 0;
+        .one_point{
+            margin: 10px 30px 10px 0px;
+        }
+    }
+    .post-price{
+        color: #007654;
+        margin: 10px 0;
+        .price{
+            margin: 10px 30px 10px 0px;
+        }
+    }
+}

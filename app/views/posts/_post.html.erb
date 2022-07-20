@@ -9,10 +9,25 @@
         <% end %>
       </div>
       <div class="card-body">
-        <h4 class="card-title">
-          <%= link_to post.title, post_path(post) %>
+        <h4 class="card-title yokonarabi-box">
+          <span class="yokonarabi">
+            <%= link_to post.title, post_path(post), class: 'post-title' %>
+          </span>
+          <span class="yokonarabi">
+            <% if post.category == "あっさり系" %>
+                <span class = 'category category-1'><%= post.category %></span>
+              <% elsif post.category == "さっぱり系"%>
+                <span class = 'category category-2'><%= post.category %></span>
+              <% elsif post.category == "甘い系"%>
+                <span class = 'category category-3'><%= post.category %></span>
+              <% elsif post.category == "カロリーオフ系"%>
+                <span class = 'category category-4'><%= post.category %></span>
+            <% end %>
+          </span>
         </h4>
-          <div class="post-evaluation" data-score=<%= post.evaluation %>></div>
+        <div class="post-evaluation" data-score=<%= post.evaluation %>></div>
+        <div class="post-one_point"><span class="one_point">一押しポイント</span><%= post.one_point %></div>
+        <div class="post-price"><span class="price">値段</span><%= post.price %>円</div>
         <% unless current_user == nil then %>
           <% if current_user.own?(post) %>
             <%= render 'crud_menus', post: post %>
@@ -27,17 +42,6 @@
           </li>
           <li class="list-inline-item">
             <%= l post.created_at, format: :long %>
-          </li>
-          <li class="list-inline-item">
-            <% if post.category == "あっさり系" %>
-              <span class = 'category category-1'><%= post.category %></span>
-            <% elsif post.category == "さっぱり系"%>
-              <span class = 'category category-2'><%= post.category %></span>
-            <% elsif post.category == "甘い系"%>
-              <span class = 'category category-3'><%= post.category %></span>
-            <% elsif post.category == "カロリーオフ系"%>
-              <span class = 'category category-4'><%= post.category %></span>
-            <% end %>
           </li>
         </ul>
       </div>
