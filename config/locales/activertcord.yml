@@ -10,15 +10,27 @@ ja:
         password_confirmation: 'パスワード確認'
         name: '名前'
         avatar: 'ユーザ写真'
+        role: '権限'
+        created_at: '作成日時'
+        id: 'ID'
       post:
-        title: 'アレンジしたメニューの名前をつけよう'
+        title: 'メニューの名前'
         arrange_content: 'アレンジ内容'
         price: '値段'
         one_point: '一言'
         images: '画像を貼ろう'
         evaluation: '評価 : '
+        category: 'カテゴリー'
+        user: '作成者'
+        created_at: '作成日時'
+        updated_at: '更新日時'
       comment:
         body: 'コメントする'
+      enums:
+        user:
+          role:
+            general: '一般'
+            admin: '管理者'
   likes:
     create:
       success: 'いいね成功'

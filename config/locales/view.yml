@@ -6,10 +6,12 @@ ja:
     use: '使い方'
     post: '投稿する'
     search_word: '検索ワード'
+    show: '詳細'
     post_content: '投稿内容'
     register: '登録'
     privacy: 'プライバシーポリシー'
     rule: '利用規約'
+    unspecified: '指定なし'
     contact: 'お問い合せ'
     edit: '編集'
     delete: '削除'
@@ -97,4 +99,18 @@ ja:
     dashboards:
       index:
         title: 'ダッシュボード'
+    users:
+      index:
+        title: 'ユーザー一覧'
+      edit:
+        title: 'ユーザー編集'
+      show:
+        title: 'ユーザー詳細'
+    posts:
+      index:
+        title: 'カップ詳細'
+      edit:
+        title: '掲示板編集'
+      show:
+        title: '掲示板詳細'
     
