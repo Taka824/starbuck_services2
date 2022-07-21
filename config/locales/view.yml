@@ -22,6 +22,7 @@ ja:
       not_updated: '更新できませんでした'
       deleted: '削除しました'
       delete_confirm: '本当に削除しますか？'
+      not_authorized: '権限がありません'
   users:
     new:
       title: 'ユーザー登録'
@@ -84,4 +85,16 @@ ja:
         success: 'メールを送信しました'
       update:
         success: 'パスワード再設定に成功しました'
-      
+  admin:
+    user_sessions:
+      new:
+        title: 'ログイン'
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    dashboards:
+      index:
+        title: 'ダッシュボード'
+    
