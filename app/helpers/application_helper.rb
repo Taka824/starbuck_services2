@@ -1,7 +1,15 @@
 module ApplicationHelper
-  def page_title(page_title = '')
-    base_title = 'My Favorite Starbucks'
+  def page_title(page_title = '', admin = false)
+    base_title = if admin
+                   'My Favorite Starbucks(管理画面)'
+                 else
+                   'My Favorite Starbucks'
+                 end
 
     page_title.empty? ? base_title : page_title + ' | ' + base_title
+  end
+
+  def active_if(path)
+    path == controller_path ? 'active' : ''
   end
 end

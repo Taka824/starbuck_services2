@@ -30,4 +30,6 @@ Rails.application.config.assets.precompile += %w(
   post.js
   login__header.js
   tab.js
+  admin.js
+  admin.css
 )
