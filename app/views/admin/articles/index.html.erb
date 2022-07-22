@@ -1,0 +1,14 @@
+
+  <%= @articles.each do |article| %>
+    <%= article.id %>
+
+    <%= link_to article.title, admin_article_path(article) %>
+
+    <%= article.body %>
+
+    <%= link_to t('defaults.new'), new_admin_article_path, class: 'btn btn-info' %>
+    <%= link_to t('defaults.show'), admin_article_path(article), class: 'btn btn-info' %>
+    <%= link_to t('defaults.edit'), edit_admin_article_path(article), class: 'btn btn-success' %>
+    <%= link_to t('defaults.delete'), admin_article_path(article), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
+
+  <% end %>

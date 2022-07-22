@@ -31,6 +31,15 @@ ja:
           role:
             general: '一般'
             admin: '管理者'
+  admin:
+    articles:
+      new:
+        title: '記事作成'
+        body: '記事内容'
+      edit:
+        title: '記事編集'
+      show:
+        title: '記事詳細'
   likes:
     create:
       success: 'いいね成功'
