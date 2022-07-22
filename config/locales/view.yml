@@ -57,6 +57,8 @@ ja:
     show:
       title: '投稿の詳細'
       body: 'コメント'
+  articles:
+    title: '記事'
   categories:
     index:
       title: 'カテゴリー作成、一覧表示（管理者専用サイト)'
@@ -99,6 +101,13 @@ ja:
     dashboards:
       index:
         title: 'ダッシュボード'
+    articles:
+      show:
+        title: '記事タイトル'
+        body: '記事の内容'
+      new:
+        title: '記事作成'
+        body: '記事の内容作成'
     users:
       index:
         title: 'ユーザー一覧'

@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
   resources :retirements
+  resources :articles, only: %i[index show]
 
   namespace :admin do
     root to: 'dashboards#index'
@@ -40,5 +41,6 @@ Rails.application.routes.draw do
     delete 'logout', to: 'user_sessions#destroy'
     resources :posts, only: %i[index edit update show destroy]
     resources :users, only: %i[index edit update show destroy]
+    resources :articles
   end
 end

@@ -20,6 +20,7 @@
               <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
               <li><%= link_to (t 'defaults.use'), login_path, class: 'header__li' %></li>
               <li><%= link_to t('posts.new.title'), new_post_path, class: 'header__li' %></li>
+              <li><%= link_to t('articles.title'), articles_path, class: 'header__li' %></li>
             </ul>
           </nav>
           <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
