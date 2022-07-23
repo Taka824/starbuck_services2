@@ -1,47 +1,55 @@
 <%= stylesheet_link_tag 'post', :media => "all"%>
 <%= stylesheet_link_tag 'category', :media => "all"%>
-<div class="col-sm-12 col-lg-4 mb-3">
+<div class="col-sm-12 col-lg-4 mb-3 card-outline">
   <div id="post-id-<%= post.id %>">
     <div class="card">
-      <div class="swipe">
-        <% post.images.each do |image| %>
-            <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
-        <% end %>
-      </div>
       <div class="card-body">
-        <h4 class="card-title yokonarabi-box">
-          <span class="yokonarabi">
-            <%= link_to post.title, post_path(post), class: 'post-title' %>
-          </span>
-          <span class="yokonarabi">
+        <div class="swipe">
+          <% post.images.each do |image| %>
+              <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
+          <% end %>
+        </div>
+        <h4 class="card-title category-box">
+          <span class="category-content">
             <% if post.category == "あっさり系" %>
-                <span class = 'category category-1'><%= post.category %></span>
+                <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-1'><%= post.category %></span></span></span>
               <% elsif post.category == "さっぱり系"%>
-                <span class = 'category category-2'><%= post.category %></span>
+                <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-2'><%= post.category %></span></span></span>
               <% elsif post.category == "甘い系"%>
-                <span class = 'category category-3'><%= post.category %></span>
+                <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-3'><%= post.category %></span></span></span>
               <% elsif post.category == "カロリーオフ系"%>
-                <span class = 'category category-4'><%= post.category %></span>
+                <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-4'><%= post.category %></span></span></span>
             <% end %>
           </span>
         </h4>
-        <div class="post-evaluation" data-score=<%= post.evaluation %>></div>
-        <div class="post-one_point"><span class="one_point">一押しポイント</span><%= post.one_point %></div>
-        <div class="post-price"><span class="price">値段</span><%= post.price %>円</div>
-        <% unless current_user == nil then %>
-          <% if current_user.own?(post) %>
-            <%= render 'crud_menus', post: post %>
-          <% else  %>
-            <%= render 'like_button', post: post %>
-          <%  end %>
-        <% end %>
-        <ul class="list-inline">
+        <div class='post-information'>
+          <div class="post-like">
+            <% unless current_user == nil then %>
+              <% if current_user.own?(post) %>
+                <%= render 'crud_menus', post: post %>
+              <% else  %>
+                <%= render 'like_button', post: post %>
+              <%  end %>
+            <% end %>
+          </div>
+          <div class='raty-price'>
+            <div class="post-evaluation" data-score=<%= post.evaluation %>></div>
+            <div class="post-price"><span class="price"><i class="fas fa-dollar-sign"></i></span><%= post.price %>円</div>
+          </div>
+        </div>
+        <div class="post-title">
+          <i class="fas fa-coffee"></i><span class="arange-title"></span><%= link_to post.title, post_path(post), class: 'post-title-content' %>
+        </div>
+        <span class="created-time">
+            <%= l post.created_at, format: :long %>
+        </span>
+        <ul class="list-inline post-user-information">
+          <li class="list-inline-item">
+            <div class="post-one_point"><span class="one_point"><i class="fas fa-comment"></i></span><%= post.one_point %></div>
+          </li>
           <li class="list-inline-item">
             <%= image_tag post.user.avatar.url , size: '20x20', class: 'rounded-circle' %>
             <%= post.user.name %>
-          </li>
-          <li class="list-inline-item">
-            <%= l post.created_at, format: :long %>
           </li>
         </ul>
       </div>

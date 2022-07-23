@@ -1,48 +1,58 @@
-.category-1{
-    border: 2px solid aquamarine;
-    border-radius: 6px;
-    padding: 4px;
-    background-color: aquamarine;
-    color: white;
-    transition: 1s;
-     &:hover{
-         color: black;
-         background-color: transparent;
-    }
-}
-.category-2{
-    border: 2px solid rgb(127, 217, 255);
-    border-radius: 6px;
-    padding: 4px;
-    background-color: rgb(127, 217, 255);
-    color: white;
-    transition: 1s;
-     &:hover{
-         color: black;
-         background-color: transparent;
-    }
-}
-.category-3{
-    border: 2px solid rgb(255, 127, 206);
-    border-radius: 6px;
-    padding: 4px;
-    background-color: rgb(255, 127, 206);
-    color: white;
-    transition: 1s;
-     &:hover{
-         color: black;
-         background-color: transparent;
-    }
-}
-.category-4{
-    border: 2px solid rgb(127, 255, 136);
-    border-radius: 6px;
-    padding: 4px;
-    background-color: rgb(127, 255, 136);
-    color: white;
-    transition: 1s;
-     &:hover{
-         color: black;
-         background-color: transparent;
-    }
-}
+  .category-out {
+    display: inline-block;
+    margin: 0 .5em .3em 1em;
+    padding: 0;
+    .category-in {
+        position: relative;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 1em;
+        background-color: #047655;
+        border-radius: 0 3px 3px 0;
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none;
+        -webkit-transition: .2s;
+        transition: .2s;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: -15px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-color: transparent #047655 transparent transparent;
+            border-style: solid;
+            border-width: 15px 15px 15px 0;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            left: -15px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-color: transparent #047655 transparent transparent;
+            border-style: solid;
+            border-width: 15px 15px 15px 0;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+        &:hover{
+            background-color: #555;
+            color: #fff;
+        }
+        &:hover::before{
+            border-right-color: #555;
+        }
+        &:hover::after{
+            border-right-color: #555;
+        }
+      }
+  }
+  .category-1-out{
+    background-color: green;
+  }
