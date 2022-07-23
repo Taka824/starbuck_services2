@@ -13,7 +13,7 @@ class Admin::ArticlesController < Admin::BaseController
     def create
       @article = current_user.articles.build(article_params)
       if @article.save
-        redirect_to articles_path, success: t('defaults.message.created', item: Article.model_name.human)
+        redirect_to admin_article_path(@article), success: t('defaults.message.created', item: Article.model_name.human)
       else
         flash.now['danger'] = t('defaults.message.not_created', item: Article.model_name.human)
         render :new

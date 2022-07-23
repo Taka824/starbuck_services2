@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
-      board: '掲示板'
+      post: '掲示板'
     attributes:
       user:
         email: 'メールアドレス'
@@ -31,6 +31,9 @@ ja:
           role:
             general: '一般'
             admin: '管理者'
+      article:
+        title: '記事タイトル'
+        body: '記事内容'
   admin:
     articles:
       new:
