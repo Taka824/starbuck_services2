@@ -1,23 +1,81 @@
 .login__width{
-    margin: 0 auto;
+    margin: 30px auto 10px auto;
     width: 50%;
-    max-width: 400px;
-    min-width: 350px;
-    h1{
-        text-align: center;
+    max-width: 430px;
+    min-width: 300px;
+    height: 700px;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background-color: #f9fff4;
+    box-shadow: 13px 13px 20px #cbced1,
+    -13px -13px 20px #fff;
+    .logo-div{
+        .logo{
+            .login-image{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin: 0 auto;
+                box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
+            }
+        }
+        .title{
+            padding: 75px 5px 5px 5px;
+            text-align: center;
+            font-size: 28px;
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+        }
     }
     .form-group{
-        .login__form{
-            margin: 6px 0;
+        .form-control{
+            border: none;
+            outline: none;
+            background: none;
+            margin: 30px 0;
+            color: black;
+            padding: 20px 10px 20px 5px;
+            border-radius: 25px;
+            box-shadow: inset 3px 3px 3px #cbced1,
+            inset -3px -3px 3px #fff;
         }
     }
     .login__button{
         margin: 15px 0;
         .btn{
+            outline: none;
+            border: none;
+            cursor: pointer;
             width: 100%;
-            max-width: 400px;
-            min-width: 350px;
+            padding: 10px 10px 10px 5px;
+            max-width: 430px;
+            min-width: 230px;
             text-align: center;
+            border-radius: 30px;
+            font-weight: 700;
+            color: #fff;
+            background: #047655;
+            box-shadow: 3px 3px 8px #b1b1b1,
+            -3px -3px 8px #fff;
+            transition: all 0.5s;
+            &:hover{
+                background: #b8e8be;
+            }
+            &:active{
+                background: #a6ffb2;
+            }
+        }
+    }
+    .text-center{
+        margin: 15px 0;
+        .user-information{
+            text-decoration: none;
+            color: #aaa;
+            font-size: 12px;
+            transition: 0.5s;
+            &:hover{
+                opacity: 0.6;
+            }
         }
     }
 }

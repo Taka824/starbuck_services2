@@ -25,6 +25,13 @@ ja:
       deleted: '削除しました'
       delete_confirm: '本当に削除しますか？'
       not_authorized: '権限がありません'
+  views:
+    pagination:
+      first: <i class="fas fa-angle-double-left"></i>
+      last: <i class="fas fa-angle-double-right"></i>
+      previous: <i class="fas fa-angle-left"></i>
+      next: <i class="fas fa-angle-right"></i>
+      truncate: "..."
   users:
     new:
       title: 'ユーザー登録'
