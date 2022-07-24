@@ -1,0 +1,32 @@
+.form-group{
+    max-width: 600px;
+    min-width: 200px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    label{
+        padding-top: 2px;
+        justify-content: center;
+        
+    }
+    .form-control{
+      border: none;
+      background: #f9fff4;
+      box-shadow: none;
+      border-bottom: 2px solid rgb(50, 50, 50);
+      width: 400px;
+    }
+}
+.form-raty{
+    position: relative;
+    height: 30px;
+    .form-raty-content{
+        position: absolute;
+        left: 45%;
+    }
+  }
+.post-btn{
+    position: relative;
+    top: 10px;
+    left: 50%;
+}
