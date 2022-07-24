@@ -1,0 +1,47 @@
+.cubic{
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+    perspective: 300px;
+    width: 100px;
+    height: 23px;
+    margin: 0 auto;
+    cursor: pointer;
+    & span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 21px;
+        text-align: center;
+        transition: all 0.3s;
+    }
+    & .hovering{
+        background-color: #047655;
+        border: 2px bold #047655;
+        color: white;
+        transform: rotateX(90deg);
+        transform-origin: center center -25px;
+        opacity: 0;
+    }
+    & .default {
+        background-color: white;
+        color: black;
+        transform: rotateX(0);
+        transform-origin: center center -25px;
+        opacity: 1;
+    }
+
+    &:hover{
+        & .hovering{
+            transform: rotateX(0);
+            opacity: 1;
+        }
+        & .default {
+            transform: rotateX(-90deg);
+            opacity: 0;
+        }
+
+    }
+}

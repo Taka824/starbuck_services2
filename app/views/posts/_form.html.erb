@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'post_form', :media => "all"%>
 <%= form_with model: post, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="form-group">
@@ -5,33 +6,35 @@
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :arrange_content %>
-    <%= f.text_area :arrange_content, class: 'form-control', rows: 10 %>
+    <%= f.label :arrange_content, class: 'form-content' %>
+    <%= f.text_area :arrange_content, class: 'form-control', size: "20x10" %>
   </div>
   <div class="form-group">
-    <%= f.label :price %>
+    <%= f.label :price, class: 'form-content'%>
     <%= f.number_field :price, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
-    <%= f.label :one_point %>
+    <%= f.label :one_point, class: 'form-content'%>
     <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
-    <%= f.label :category, 'カテゴリー' %>
+    <%= f.label :category, 'カテゴリー', class: 'form-content'%>
     <%= f.select :category, {'あっさり系': "あっさり系", 'さっぱり系': 'さっぱり系','甘い系': '甘い系','カロリーオフ系': 'カロリーオフ系'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
   </div>
   <div class="form-group">
-    <%= f.label :images %>
+    <%= f.label :images, class: 'form-content'%>
     <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true, accept: 'image/*' %>
     <% post.images.each do |image| %>
       <%= hidden_field :post, :images, multiple: true, value: image.identifier %>
     <% end %>
   </div>
-  <div class="form-group" id="star">
-    <%= f.label :evaluation, class:"" %>
-    <%= f.hidden_field :evaluation, id: :review_star %>
+  <div class="form-raty">
+    <div class="form-raty-content", id="star">
+      <%= f.label :evaluation, class:"" %>
+      <%= f.hidden_field :evaluation, id: :review_star %>
+    </div>
   </div>
-  <%= f.submit class: 'btn btn-primary' %>
+  <%= f.submit class: 'btn btn-primary post-btn' %>
 <% end %>
 
 <script>

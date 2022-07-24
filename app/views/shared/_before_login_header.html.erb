@@ -1,5 +1,7 @@
 <%= stylesheet_link_tag 'login__header', :media => "all"%>
 <%= stylesheet_link_tag 'tab', :media => "all"%>
+<%= stylesheet_link_tag 'button-back-slide', :media => "all"%>
+<%= stylesheet_link_tag 'button-border-slide', :media => "all"%>
 <div class='header-trigger'></div>
   <div class="section">
     <header class='login-header'>
@@ -10,10 +12,12 @@
         <nav class="header__nav">
           <ul class='header__ul'>
             <li><%= link_to (t 'defaults.login'), login_path, class: 'header__li' %></li>
-            <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
+            <%= link_to(posts_path, class: 'header__li') do %>
+              <li class="cubic"><span class="hovering">参考にしよう</span><span class="default"><%= (t 'defaults.everyone_post')%></span></li>
+            <% end %>
             <li><%= link_to (t 'defaults.use'), login_path, class: 'header__li' %></li>
             <li><%= link_to (t 'defaults.post'), login_path, class: 'header__li' %></li>
-          </ul>
+          </ul> 
         </nav>
         <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
           <span></span>
