@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'post', :media => "all"%>
 <%= stylesheet_link_tag 'category', :media => "all"%>
-<div class="col-sm-12 col-lg-4 mb-3 card-outline">
+<div class="col-sm-6 col-lg-4 col-xs-12 mb-3 card-outline">
   <div id="post-id-<%= post.id %>">
     <div class="card">
       <div class="card-body">
@@ -34,7 +34,7 @@
           </div>
           <div class='raty-price'>
             <div class="post-evaluation" data-score=<%= post.evaluation %>></div>
-            <div class="post-price"><span class="price"><i class="fas fa-dollar-sign"></i></span><%= post.price %>円</div>
+            <%# <div class="post-price"><span class="price"><i class="fas fa-dollar-sign"></i></span><%= post.price円</div>  %>
           </div>
         </div>
         <div class="post-title">
