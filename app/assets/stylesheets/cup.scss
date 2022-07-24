@@ -289,15 +289,15 @@
         font-size: 26px;
     }
     .cup{
-        width: 235px;
-        height: 255px;
+        width: 225px;
+        height: 235px;
     }
     .handle{
         position: absolute;
         right: -30px;
         top: 20px;
         width: 100px;
-        height: 180px;
+        height: 160px;
         border: 25px solid white;
         border-left: 25px solid transparent;
         border-bottom: 25px solid transparent;
@@ -306,7 +306,7 @@
     }
     .plate{
         position: absolute;
-        bottom: -50px;
+        bottom: -55px;
         left: 50%;
         transform: translateX(-50%);
         width: 370px;
@@ -314,6 +314,10 @@
         background: linear-gradient(to right, #f9f9f9, #e7e7e7);
         border-radius: 50%;
         box-shadow: 0 35px 35px rgba(0,0,0,0.2);
+    }
+    .cup-image{
+        width: 80px;
+        
     }
 }
      
