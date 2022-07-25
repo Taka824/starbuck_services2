@@ -15,8 +15,9 @@
             <%= link_to(posts_path, class: 'header__li') do %>
               <li class="cubic"><span class="hovering">参考にしよう</span><span class="default"><%= (t 'defaults.everyone_post')%></span></li>
             <% end %>
-            <li><%= link_to (t 'defaults.use'), login_path, class: 'header__li' %></li>
-            <li><%= link_to (t 'defaults.post'), login_path, class: 'header__li' %></li>
+            <li><%= link_to (t 'defaults.post'), new_post_path, class: 'header__li' %></li>
+            <li><%= link_to t('articles.title'), articles_path, class: 'header__li' %></li>
+            <li><%= link_to '30秒診断', dignoses_path, class: 'header__li' %></li>
           </ul> 
         </nav>
         <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">

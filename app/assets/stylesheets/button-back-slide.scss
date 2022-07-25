@@ -1,14 +1,16 @@
-.gnavi li a{
-    /*線の基点とするためrelativeを指定*/
-  position: relative;
+.header__ul{
+    li {
+        .header__li{
+            position: relative;
+        }
+    }
 }
 
-.gnavi li.current a,
-.gnavi li a:hover{
-  color:#0481A2;
+.section .login-header .header__inner .header__nav .header__ul li .header__li:hover{
+  color:#047655;
 }
 
-.gnavi li a::after {
+.header__ul li .header__li::after {
     content: '';
     /*絶対配置で線の位置を決める*/
     position: absolute;
@@ -17,7 +19,7 @@
     /*線の形状*/
     width: 80%;
     height: 2px;
-    background:#0481A2;
+    background:#047655;
     /*アニメーションの指定*/
     transition: all .3s;
     transform: scale(0, 1);/*X方向0、Y方向1*/
@@ -25,14 +27,44 @@
 }
 
 /*現在地とhoverの設定*/
-.gnavi li.current a::after,
-.gnavi li a:hover::after {
-    transform: scale(1, 1);/*X方向にスケール拡大*/
+.header__ul li .header__li:hover::after {
+    transform: scale(1.5, 1.5);/*X方向にスケール拡大*/
 }
 
 
-/*========= レイアウトのためのCSS ===============*/
 
-.lead{
-  padding: 50px 20px;
+
+// mobile
+
+.mobile-header__ul{
+    li {
+        .mobile-header__li{
+            position: relative;
+        }
+    }
+}
+
+.mobile-header__nav .mobile-header__ul li .mobile-header__li:hover{
+  color:#047655;
+}
+
+.mobile-header__ul li .mobile-header__li::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:#047655;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.mobile-header__ul li .mobile-header__li:hover::after {
+    transform: scale(1.3, 1.3);/*X方向にスケール拡大*/
 }

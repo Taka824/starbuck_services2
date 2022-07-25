@@ -1,5 +1,7 @@
 <%= stylesheet_link_tag 'login__header', :media => "all"%>
 <%= stylesheet_link_tag 'tab', :media => "all"%>
+<%= stylesheet_link_tag 'button-back-slide', :media => "all"%>
+<%= stylesheet_link_tag 'button-border-slide', :media => "all"%>
 <div class='header-trigger'></div>
     <div class="section">
       <header class='login-header'>
@@ -7,20 +9,23 @@
           <%= link_to root_path, class: 'login-logo' do %>
             <%= image_tag 'starbuck.png', class: 'image' %>
           <% end %>
-          <ul class="tab">
+          <%# <ul class="tab">
+             
             <li><a href="#lunch"><span class="tab-span">みんなの投稿</span></a></li>
-            <li><a href="#drink"><span class="tab-span">記事</span></a></li>
+            <%# <li><%= link_to posts_path do %>
+            <%# <span class="tab-span">記事</span><%end%>
+            <%# </li>
             <li><a href="#dinner"><span class="tab-span">今日の気分</span></a></li>
-          </ul>  
+          </ul>   %> 
           <nav class="header__nav">
             <ul class='header__ul'>
               <li><%= link_to (t 'defaults.logout'), logout_path, class: 'header__li', method: :delete %></li>
               <li><%= link_to t('posts.likes.title'), likes_posts_path, class: 'header__li' %></li>
               <li><%= link_to (t 'profiles.show.title'), profile_path, class: 'header__li' %></li>
               <li><%= link_to (t 'defaults.everyone_post'), posts_path, class: 'header__li' %></li>
-              <li><%= link_to (t 'defaults.use'), login_path, class: 'header__li' %></li>
               <li><%= link_to t('posts.new.title'), new_post_path, class: 'header__li' %></li>
               <li><%= link_to t('articles.title'), articles_path, class: 'header__li' %></li>
+              <li><%= link_to '30秒診断', dignoses_path, class: 'header__li' %></li>
             </ul>
           </nav>
           <button class="login-mobile-menu-icon" onclick="document.querySelector('body').classList.toggle('menu-open')">
@@ -31,7 +36,7 @@
         </div>
       </header>
 
-      <div id="lunch" class="area">
+      <%# <div id="lunch" class="area">
         <h2>みんなの投稿</h2>
       </div>
 
@@ -40,9 +45,9 @@
       </div>
 
       <div id="dinner" class="area">
-        <h2>30秒診断しよう</h2>
-        <%= render 'dignose/index'%>
-      </div>
+        <h2>30秒診断しよう</h2> %>
+        <%# <%= render 'dignose/index'%>
+      <%# </div> %>
   </div>
 <%= javascript_include_tag "login__header.js" %>
 <%= javascript_include_tag "tab.js" %>
