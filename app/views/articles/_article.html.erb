@@ -1,2 +1,12 @@
-<%= article.title %>
-<%= article.body %>
+<article class="article-card">
+  <figure class="article-image">
+    <%= image_tag 'starbuck.png', class: 'image' %>
+  </figure>
+    <div class="article-content">
+      <div class="card-category">category</div>
+      <h3 class="card-title"><%= article.title %></h3>
+      <p class="card-excerpt"><%= article.body %></p>
+    </div>
+</article>
+  
+

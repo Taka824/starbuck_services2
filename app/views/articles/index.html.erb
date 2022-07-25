@@ -1,5 +1,10 @@
-<% if @articles.present? %>
-  <%= render @articles %>
-<% else %>
-  <p><%= t('.no_result') %></p>
-<% end %>
+<%= stylesheet_link_tag 'article', :media => "all"%>
+<div class="site-container">
+  <div class="article-container">
+    <% if @articles.present? %>
+      <%= render @articles %>
+    <% else %>
+      <p><%= t('.no_result') %></p>
+    <% end %>
+  </div>
+</div>
