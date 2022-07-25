@@ -1,5 +1,6 @@
 <% content_for(:title, t('.title'))%>
-<div class="body">
+<%= stylesheet_link_tag 'like-index', :media => "all"%>
+<div class="like-body">
   <div class="container pt-3">
     <div class="row">
       <%= render 'search_form', url: likes_posts_path %>

@@ -58,7 +58,7 @@
           <h5 class="card-header">あなたの一杯を見つけよう</h5>
           <p class="card-text">みんなが投稿した色々なアレンジしたスタバが載っています。カロリーを抑えたい、さっぱりけいにアレンジしたい、などなど、みんなの投稿を見てあなたの一杯を探してみてください。</p>
           <p style="text-align: center;">
-            <%= link_to "お気に入りの一杯を探す", '#', class: "btn btn-primary"%>
+            <%= link_to "お気に入りの一杯を探す", posts_path, class: "btn btn-primary"%>
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@
           <h5 class="card-header">お気入りの一杯を投稿しよう</h5>
           <p class="card-text">みんなの一杯を見つけたら、今度は特別な一杯を投稿してみてください。あなたのお気に入りの一杯が、他の人のお気に入りの一杯に変わるかもしれません。沢山投稿してみてください。</p>
           <p style="text-align: center;">
-            <%= link_to "お気に入りの一杯を投稿する", '#', class: "btn btn-primary" %>
+            <%= link_to "お気に入りの一杯を投稿する", new_post_path, class: "btn btn-primary" %>
           </p>
         </div>
       </div>
@@ -84,7 +84,7 @@
           <h5 class="card-header">気分に合わせて注文しよう</h5>
           <p class="card-text">その日の気分によって注文したい商品も変わってきますよね。そう言う時は、今日の気分を診断してみてください。たった3つの質問で、あなたへの今日の一杯を見つけることができます。</p>
           <p style="text-align: center;">
-            <%= link_to "今日の気分を診断する", '#', class: "btn btn-primary" %>
+            <%= link_to "今日の気分を診断する", dignoses_path, class: "btn btn-primary" %>
           </p>
         </div>
       </div>

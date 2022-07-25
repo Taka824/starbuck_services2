@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w(
   search.scss
   pagenate.scss
   button-back-slide.scss
+  like-index.scss
   button-border-slide
   post_form.scss
   post__index.js

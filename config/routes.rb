@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   resources :password_resets, only: %i[new create edit update]
   resources :retirements
   resources :articles, only: %i[index show]
+  resources :dignoses
 
   namespace :admin do
     root to: 'dashboards#index'
