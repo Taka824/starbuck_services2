@@ -15,6 +15,9 @@
             &:hover{
                 box-shadow: none;
                 cursor: pointer;
+                .card-excerpt{
+                    overflow-wrap:  break-word;
+                }
             }
             .article-image{
                 margin: 0;
