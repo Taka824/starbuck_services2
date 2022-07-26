@@ -2,7 +2,7 @@
   <div class="col-lg-8 offset-lg-2 comment-box ">
     <%= form_with model: comment, url: [post, comment], local: true do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :body %>
+      <i class="fas fa-comment show-icon"></i><%= f.label :body %>
       <div class="comment">
         <%= f.text_area :body, class: 'form-control mb-3', id: 'js-new-comment-body', row: 4, placeholder: Comment.human_attribute_name(:body) %>
       </div>

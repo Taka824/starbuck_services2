@@ -77,3 +77,30 @@ li{
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (min-width:800px) {
+    .card{
+        .title-information-box{
+            .d-inline{
+                margin-top: 10px;
+            }
+            .post-information{
+                margin-top: 40px;
+            }
+        }
+        .show-content{
+            margin-top: 30px;
+            display: flex;
+            
+        }
+    }
+    .user-information-like{
+        position: absolute;
+        bottom: 0;
+        right: 6px;
+        display: flex;
+        justify-content: space-between;
+    }
+	/*　画面サイズが480px以下の場合ここの記述が適用される　*/
+ 
+}

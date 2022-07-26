@@ -30,15 +30,17 @@
             </div>
             <div class='col-md-5'>
               <div class='title-information-box'>
-                <h3 class="d-inline"><span class='show-title'>タイトル</span><%= @post.title %></h3>
+                <h3 class="d-inline"><span class='show-title'><i class="fas fa-coffee show-icon"></i></span><%= @post.title %></h3>
                 <div class="post-information">
                   <div class="raty-price">
                     <div class="post-evaluation" data-score="<%= @post.evaluation %>"></div>
-                    <div class="post-price"><%= @post.price %></div>
+                    <div class="post-price"><i class="fas fa-dollar-sign"></i><%= @post.price %>円</div>
                   </div>
                 </div>
               </div>
-              <%= simple_format(@post.arrange_content) %>
+              <div class='show-content'>
+                <i class="fas fa-edit show-icon"></i><%= simple_format(@post.arrange_content) %>
+              </div>
               <div class='user-information-like'>
                 <div class="post-like">
                   <% unless current_user == nil then %>
@@ -50,8 +52,8 @@
                   <% end %>
                 </div>
                 <ul class="list-inline">
-                  <li class="list-inline-item"><%= image_tag @post.user.avatar.url, class: 'rounded-circle', size: '20x20' %><%= @post.user.name %></li>
-                  <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
+                  <li class="list-inline-item"><%= image_tag @post.user.avatar.url, class: 'rounded-circle show-icon', size: '20x20' %><%= @post.user.name %></li>
+                  <li class="list-inline-item"><i class="far fa-calendar-alt show-icon"></i><%= l @post.created_at, format: :long  %></li>
                 </ul>
             </div>
           </div>
