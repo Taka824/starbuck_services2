@@ -1,11 +1,11 @@
 .site-container{
     font-size: 16px;
     margin: 2rem auto;
-    width: 800px;
+    width: 850px;
     max-width: calc(100% - 80px);
     .article-container{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
         gap: 2rem;
         .article-card{
             background-color: white;
