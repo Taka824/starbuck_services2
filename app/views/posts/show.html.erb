@@ -1,5 +1,6 @@
 <% content_for(:title, @post.title) %>
 <%= stylesheet_link_tag 'categories', :media => "all"%>
+<%= stylesheet_link_tag 'admin-categories', :media => "all"%>
 <%= stylesheet_link_tag 'show-post', :media => "all"%>
 <%= stylesheet_link_tag 'comment-post', :media => "all"%>
 <div class="container pt-5">
@@ -27,6 +28,23 @@
                   <% end %>
                 </span>
               </h4>
+
+              <% if @post.admin_category? %>
+                <h4 class="card-title category-box">
+                  <span class="category-content">
+                    <% if @post.admin_category == "管理者" %>
+                        <span class='category-out admin-category-1-out'><span class="category-in"><span class = 'category admin-category-1'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "現役スタバ店員"%>
+                        <span class='category-out admin-category-2-out'><span class="category-in"><span class = 'category admin-category-2'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "元スタバ店員"%>
+                        <span class='category-out admin-category-3-out'><span class="category-in"><span class = 'category admin-category-3'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "スタ犬くん"%>
+                        <span class='category-out admin-category-4-out'><span class="category-in"><span class = 'category admin-category-4'><%= @post.admin_category %></span></span></span>
+                    <% end %>
+                  </span>
+                </h4>
+              <% end %>
+
             </div>
             <div class='col-md-5'>
               <div class='title-information-box'>

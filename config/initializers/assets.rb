@@ -24,6 +24,8 @@ Rails.application.config.assets.precompile += %w(
   about.scss
   dignose.scss
   category.scss
+  admin-category.scss
+  admin-categories.scss
   search.scss
   pagenate.scss
   button-back-slide.scss
