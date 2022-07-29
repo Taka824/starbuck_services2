@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_22_014712) do
+ActiveRecord::Schema.define(version: 2022_07_27_025743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2022_07_22_014712) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category"
+    t.string "article_image"
+    t.string "summary"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
@@ -76,6 +79,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_014712) do
     t.json "images"
     t.float "evaluation"
     t.string "category"
+    t.string "admin_category"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

@@ -1,5 +1,13 @@
+<%= stylesheet_link_tag 'retirement', :media => "all"%>
 <div class="container">
-  <h1>退会する</h1>
-  <div>退会した場合、ユーザに関するデータが全て削除されます</div>
-  <%= link_to "退会する", retirements_path, method: :post, remote: true, class: "btn btn-danger", data: {confirm: '本当に退会しますか？'} %>
+  <div class="retirement-container">
+    <h1>退会する</h1>
+    <h3>退会した場合、ユーザに関するデータが全て削除されます</h3>
+    <h4 class='retirement-alarm'>※退会手続に伴うご注意事項</h4>
+    <h5 class="retirement-content">１．退会により、保存していたアカウント情報は失効し、会員の地位にあることを条件にしたサービスの利用や、
+         いいね済みの他ユーザ様のコンテンツの閲覧はできなくなります。</h5>
+    <h5 class="retirement-content">２．退会手続が完了した後において、同一のお客様が、ふたたび会員の登録をした場合でも、
+           退会手続により失効したいいねや利用不能になったサービス・コンテンツ等が回復することはありません。</h5>
+    <%= link_to "退会する", retirements_path, method: :post, remote: true, class: "btn btn-danger btn-retirement", data: {confirm: '本当に退会しますか？'} %>
+  </div>
 </div>

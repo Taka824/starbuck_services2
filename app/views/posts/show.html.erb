@@ -1,30 +1,80 @@
 <% content_for(:title, @post.title) %>
-<%= stylesheet_link_tag 'post', :media => "all"%>
-<%= stylesheet_link_tag 'category', :media => "all"%>
+<%= stylesheet_link_tag 'categories', :media => "all"%>
+<%= stylesheet_link_tag 'admin-categories', :media => "all"%>
+<%= stylesheet_link_tag 'show-post', :media => "all"%>
+<%= stylesheet_link_tag 'comment-post', :media => "all"%>
 <div class="container pt-5">
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('.title') %></h1>
-      <!-- 掲示板内容 -->
+      <!-- post内容 -->
       <article class="card">
         <div class="card-body">
           <div class='row'>
-            <div class='col-md-3'>
+            <div class='col-md-7'>
               <% @post.images.each do |image| %>
                 <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
               <% end %>
+              <h4 class="card-title category-box">
+                <span class="category-content">
+                  <% if @post.category == "あっさり系" %>
+                      <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-1'><%= @post.category %></span></span></span>
+                    <% elsif @post.category == "さっぱり系"%>
+                      <span class='category-out category-2-out'><span class="category-in"><span class = 'category category-2'><%= @post.category %></span></span></span>
+                    <% elsif @post.category == "甘い系"%>
+                      <span class='category-out category-3-out'><span class="category-in"><span class = 'category category-3'><%= @post.category %></span></span></span>
+                    <% elsif @post.category == "カロリーオフ系"%>
+                      <span class='category-out category-4-out'><span class="category-in"><span class = 'category category-4'><%= @post.category %></span></span></span>
+                  <% end %>
+                </span>
+              </h4>
+
+              <% if @post.admin_category? %>
+                <h4 class="card-title category-box">
+                  <span class="category-content">
+                    <% if @post.admin_category == "管理者" %>
+                        <span class='category-out admin-category-1-out'><span class="category-in"><span class = 'category admin-category-1'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "現役スタバ店員"%>
+                        <span class='category-out admin-category-2-out'><span class="category-in"><span class = 'category admin-category-2'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "元スタバ店員"%>
+                        <span class='category-out admin-category-3-out'><span class="category-in"><span class = 'category admin-category-3'><%= @post.admin_category %></span></span></span>
+                      <% elsif @post.admin_category == "スタ犬くん"%>
+                        <span class='category-out admin-category-4-out'><span class="category-in"><span class = 'category admin-category-4'><%= @post.admin_category %></span></span></span>
+                    <% end %>
+                  </span>
+                </h4>
+              <% end %>
+
             </div>
-            <div class='col-md-9'>
-              <h3 class="d-inline"><%= @post.title %></h3>
-              <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
-              <ul class="list-inline">
-                <li class="list-inline-item">by <%= @post.user.name %></li>
-                <li class="list-inline-item"><%= l @post.created_at, format: :long  %></li>
-              </ul>
+            <div class='col-md-5'>
+              <div class='title-information-box'>
+                <h3 class="d-inline"><span class='show-title'><i class="fas fa-coffee show-icon"></i></span><%= @post.title %></h3>
+                <div class="post-information">
+                  <div class="raty-price">
+                    <div class="post-evaluation" data-score="<%= @post.evaluation %>"></div>
+                    <div class="post-price"><i class="fas fa-dollar-sign"></i><%= @post.price %>円</div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-content'>
+                <i class="fas fa-edit show-icon"></i><%= simple_format(@post.arrange_content) %>
+              </div>
+              <div class='user-information-like'>
+                <div class="post-like">
+                  <% unless current_user == nil then %>
+                    <% if current_user.own?(@post) %>
+                      <%= render 'crud_menus', post: @post %>
+                    <% else  %>
+                      <%= render 'like_button', post: @post %>
+                    <%  end %>
+                  <% end %>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><%= image_tag @post.user.avatar.url, class: 'rounded-circle show-icon', size: '20x20' %><%= @post.user.name %></li>
+                  <li class="list-inline-item"><i class="far fa-calendar-alt show-icon"></i><%= l @post.created_at, format: :long  %></li>
+                </ul>
             </div>
-            <div class="post-evaluation" data-score="<%= @post.evaluation %>"></div>
           </div>
-          <%= simple_format(@post.arrange_content) %>
         </div>
       </article>
     </div>

@@ -17,6 +17,12 @@
     <%= f.label :one_point, class: 'form-content'%>
     <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
   </div>
+  <% if current_user.admin? %>
+    <div class="form-group">
+      <%= f.label :admin_category, '管理者カテゴリー', class: 'form-content'%>
+      <%= f.select :admin_category, {'管理者': "管理者", '現役スタバ店員': '現役スタバ店員','元スタバ店員': '元スタバ店員','スタ犬くん': 'スタ犬くん'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+    </div>
+  <% end %>
   <div class="form-group">
     <%= f.label :category, 'カテゴリー', class: 'form-content'%>
     <%= f.select :category, {'あっさり系': "あっさり系", 'さっぱり系': 'さっぱり系','甘い系': '甘い系','カロリーオフ系': 'カロリーオフ系'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
@@ -24,6 +30,7 @@
   <div class="form-group">
     <%= f.label :images, class: 'form-content'%>
     <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true, accept: 'image/*' %>
+    <%= f.hidden_field :board_image_cache %>
     <% post.images.each do |image| %>
       <%= hidden_field :post, :images, multiple: true, value: image.identifier %>
     <% end %>

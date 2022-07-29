@@ -1,18 +1,21 @@
 <%= stylesheet_link_tag 'login', :media => "all"%>
 <% content_for(:title, t('.title'))%>
 <div class="login__width">
-  <h1><%= t '.title' %></h1>
   <div class="logo-div">
-    <div class="form-group">
-      <%= image_tag current_user.avatar.url, size: '60x60', class: 'rounded-circle' %>
+    <div class="logo"><%= image_tag 'starbuck.png', class: 'login-image' %></div>
+    <div class="title"><%=t '.title' %></div>
+  </div>
+  <div class="logo-div">
+    <div class="form-group avatar-show">
+      <%= image_tag current_user.avatar.url, size: '50x50', class: 'rounded-circle' %>
       <%= t('.avatar') %>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group form-float">
     <%= t('.email') %><br>
     <div class="mt-0"><%= current_user.email%></div>
   </div>
-  <div class="form-group">   
+  <div class="form-group form-float">   
     <%= t('.name') %><br>
     <div class="mt-0"><%= current_user.name%></div>
   </div>          

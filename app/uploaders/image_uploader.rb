@@ -12,4 +12,8 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  def default_url
+    'starbucks.jpeg'
+  end
+
 end

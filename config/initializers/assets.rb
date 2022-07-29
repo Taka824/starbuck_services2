@@ -24,10 +24,16 @@ Rails.application.config.assets.precompile += %w(
   about.scss
   dignose.scss
   category.scss
+  admin-category.scss
+  admin-categories.scss
   search.scss
   pagenate.scss
   button-back-slide.scss
   like-index.scss
+  article.scss
+  categories.scss
+  comment-post.scss
+  show-post.scss
   button-border-slide
   post_form.scss
   post__index.js

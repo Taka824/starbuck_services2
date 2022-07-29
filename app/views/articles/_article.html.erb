@@ -1,2 +1,14 @@
-<%= article.title %>
-<%= article.body %>
+<%= link_to(article_path(article), class: 'list-content') do %>
+  <article class="article-card">
+    <figure class="article-image">
+      <%= image_tag article.article_image_url, class: 'card-img-top', size: '300x300' %>
+    </figure>
+      <div class="article-content">
+        <div class="card-category">カテゴリー<%= article.category%></div>
+        <h3 class="card-title"><%= article.title %></h3>
+        <p class="card-excerpt"><%= article.summary %></p>
+      </div>
+  </article>
+<% end %>
+  
+

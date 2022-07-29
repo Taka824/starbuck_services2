@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'article-show', :media => "all"%>
+<div class="container article-container">
+<div class="article-card-box">
+<article class="article-card">
+    <figure class="article-image">
+      <%= image_tag @article.article_image_url, class: 'card-img-top', size: '300x300' %>
+    </figure>
+      <div class="article-content">
+        <div class="card-category">カテゴリー<%= @article.category%></div>
+        <h3 class="card-title"><%= @article.title %></h3>
+        <p class="card-excerpt"><%= @article.summary %></p>
+        <div class="card-body"><%= @article.body %></div>
+      </div>
+  </article>
+</div>
+</div>
