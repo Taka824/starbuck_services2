@@ -8,4 +8,5 @@ class Post < ApplicationRecord
   validates :one_point, presence: true, length: { maximum: 200 }
   validates :images, presence: true
   validates :category, presence: true
+  validates :dignose_category, presence: false
 end

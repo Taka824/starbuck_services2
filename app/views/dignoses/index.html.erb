@@ -57,38 +57,50 @@
 </div>
 
 
-<div class="result result80">
-    <% @post2 = Post.find(2) %>
-    <div class="card">
-      <div class="swipe">
-       
-        <% @post2.images.each do |image| %>
-            <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
-        <% end %>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">
-          <%= link_to @post2.title, post_path(@post2) %>
-        </h4>
-          <div class="post-evaluation" data-score=<%= @post2.evaluation %>></div>
-          <%= render 'likes-2/like_button', post: @post2 %>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <%= image_tag @post2.user.avatar.url , size: '20x20', class: 'rounded-circle' %>
-            <%= @post2.user.name %>
-          </li>
-          <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
-            <%= l @post2.created_at, format: :long %>
-          </li>
-          <li class="list-inline-item">
-            <%= @post2.category %>
-          </li>
-        </ul>
+<div class="result result40 container">
+   <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <% @posts = Post.where(dignose_category: "おすすめ1") %>
+          <% if @posts.present? %>
+            <%= render @posts %>
+          <% else %>
+            <p><%= t('.no_result') %></p>
+          <% end %>
+        </div>
       </div>
     </div>
 </div>
 
+<div class="result result20 container">
+   <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <% @posts = Post.where(dignose_category: "おすすめ2") %>
+          <% if @posts.present? %>
+            <%= render @posts %>
+          <% else %>
+            <p><%= t('.no_result') %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="result result0 container">
+   <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <% @posts = Post.where(dignose_category: "おすすめ1") %>
+          <% if @posts.present? %>
+            <%= render @posts %>
+          <% else %>
+            <p><%= t('.no_result') %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
 
 
 <script>	
@@ -139,16 +151,15 @@
         switch (true){
             case totalScore >= 40:
                 var lv = 4;
-                $(".result80").fadeIn();
+                $(".result40").fadeIn();
                 break;
             case totalScore >= 20:
                 var lv = 3;
+               $(".result20").fadeIn();
                 break;
             case totalScore >= 10:
                 var lv = 2;
-                break;
-            case totalScore >= 0:
-                var lv = 1;
+                $(".result0").fadeIn();
                 break;
             default:
                 var lv = 0;
