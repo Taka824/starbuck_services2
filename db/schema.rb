@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_27_025743) do
+ActiveRecord::Schema.define(version: 2022_07_30_025524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2022_07_27_025743) do
     t.float "evaluation"
     t.string "category"
     t.string "admin_category"
+    t.string "dignose_category"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

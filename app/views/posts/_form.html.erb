@@ -22,6 +22,10 @@
       <%= f.label :admin_category, '管理者カテゴリー', class: 'form-content'%>
       <%= f.select :admin_category, {'管理者': "管理者", '現役スタバ店員': '現役スタバ店員','元スタバ店員': '元スタバ店員','スタ犬くん': 'スタ犬くん'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
     </div>
+     <div class="form-group">
+      <%= f.label :dignose_category, '管理者カテゴリー/診断メニューへ飛ばされます', class: 'form-content'%>
+      <%= f.select :dignose_category, {'おすすめ1': "おすすめ1", 'おすすめ2': 'おすすめ2','おすすめ3': 'おすすめ3'}, { include_blank: '選択してください'}, { class: 'form-control' , required: false } %>
+    </div>
   <% end %>
   <div class="form-group">
     <%= f.label :category, 'カテゴリー', class: 'form-content'%>
