@@ -3,45 +3,49 @@
 <div id="qArea">
   <div id="qContainer">
     <div class="dignose-title">15秒で今日の一杯を見つけよう</div>
+
+  
     <div class="qBox">
-      <div class="ques"><span class="qNum">Q1</span>今日はどんな気分？</div>
+      <div class="ques"><span class="qNum">Q1　</span>今日はどんな気分？</div>
         <div class="dig-fig-box">
           <ul  class="dig_ul">
-            <li id="0_0" sc="20">新作をアレンジしたい</li>
-            <li id="0_1" sc="15">甘いのが飲みたい</li>
-            <li id="0_2" sc="10">さっぱりしたのが飲みたい</li>
-            <li id="0_3" sc="5">苦いのが飲みたい</li>
-            <li id="0_4" sc="0"></li>
+            <li id="0_0" sc="20" <% product="product_furape"%>>フラペチーノ</li>
+            <li id="0_1" sc="15" <% product ="product_coffee"%>>コーヒー系</li>
+            <li id="0_2" sc="10" <% product ="product_tea"%>>紅茶</li>
           </ul>
           <div class="fig"><%= image_tag 'fig0.png', class: "fig-image" %></div>
         </div>
-      </div>
+    </div>
 
-        <div class="qBox">
-          <div class="ques"><span class="qNum">Q2</span></div>
+    <% case product %>
+    <% when 'product_furape' then%>
+      <div class="qBox">
+        <div class="ques"><span class="qNum">Q2　</span></div>
+        <div class="dig-fig-box">
+          <ul  class="dig_ul">
+            <li id="1_0" sc="20">料理を作って本格朝食</li>
+            <li id="1_1" sc="15">パンとスープでシンプル朝食</li>
+            <li id="1_2" sc="10">サプリメントですませる</li>
+            <li id="1_3" sc="5">食べない</li>
+            <li id="1_4" sc="0">食べるどころか吐きそうだ...</li>
+          </ul>
+        <div class="fig"><%= image_tag 'fig1.png', class: "fig-image" %></div>
+        </div>
+      </div>
+   
+    <% when 'product_coffee' then%>  
+      <div class="qBox">
+          <div class="ques"><span class="qNum">Q3</span>カロリーはオフにする？</div>
           <div class="dig-fig-box">
             <ul  class="dig_ul">
-              <li id="1_0" sc="20">料理を作って本格朝食</li>
-              <li id="1_1" sc="15">パンとスープでシンプル朝食</li>
-              <li id="1_2" sc="10">サプリメントですませる</li>
-              <li id="1_3" sc="5">食べない</li>
-              <li id="1_4" sc="0">食べるどころか吐きそうだ...</li>
+              <li id="2_0" sc="20">カロリーは気にしていない</li>
+              <li id="2_1" sc="15">カロリーオフにする</li>
             </ul>
-          <div class="fig"><%= image_tag 'fig1.png', class: "fig-image" %></div>
+            <div class="fig"><%= image_tag 'fig2.png', class: "fig-image" %></div>
           </div>
-        </div>
-        
-        <div class="qBox">
-            <div class="ques"><span class="qNum">Q3</span>カロリーはオフにする？</div>
-            <div class="dig-fig-box">
-              <ul  class="dig_ul">
-                <li id="2_0" sc="20">カロリーは気にしていない</li>
-                <li id="2_1" sc="15">カロリーオフにする</li>
-              </ul>
-              <div class="fig"><%= image_tag 'fig2.png', class: "fig-image" %></div>
-            </div>
-        </div>
-
+      </div>
+    
+        <% when 'product_tea' then%> 
         <div class="qBox">
             <div id="resultBox">
                 <div id="resultTitle">下へスクロールしてみてね</div>
@@ -53,6 +57,7 @@
                 <div id="resultImage"></div> 
             </div>
         </div>
+      <% end %>
     </div>
 </div>
 
