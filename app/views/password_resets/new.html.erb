@@ -1,18 +1,22 @@
 <%= stylesheet_link_tag 'login', :media => "all"%>
-<div class="login__width">
-  <div class="logo-div">
-    <div class="logo"><%= image_tag 'starbuck.png', class: 'login-image' %></div>
-    <div class="title"><%=t '.title' %></div>
-  </div>
-  <%= form_with url: password_resets_path, local: true do |f| %>
-    <div class="form-group">
-      <%= f.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+<div class="password-reset-body">
+  <div class="container">
+    <div class="login__width">
+      <div class="logo-div">
+        <div class="logo"><%= image_tag 'starbuck.png', class: 'login-image' %></div>
+        <div class="title"><%=t '.title' %></div>
+      </div>
+      <%= form_with url: password_resets_path, local: true do |f| %>
+        <div class="form-group">
+          <%= f.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+        </div>
+        <div class="actions text-center login__button">
+          <%= f.submit t('password_resets.new.submit'), class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      <div class='text-center'>
+        <%= link_to (t 'defaults.login'), login_path, class: 'user-information'%>
+      </div>
     </div>
-    <div class="actions text-center login__button">
-      <%= f.submit t('password_resets.new.submit'), class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-  <div class='text-center'>
-    <%= link_to (t 'defaults.login'), login_path, class: 'user-information'%>
   </div>
 </div>
