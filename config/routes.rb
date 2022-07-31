@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'password_resets/update'
   root 'staebuck_pages#top'
   get 'login', to: 'user_sessions#new'
+  get 'rule', to: 'pages#rule'
+  get 'term', to: 'pages#term'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 

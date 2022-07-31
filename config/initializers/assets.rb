@@ -44,4 +44,5 @@ Rails.application.config.assets.precompile += %w(
   tab.js
   admin.js
   admin.css
+  dignose.js
 )
