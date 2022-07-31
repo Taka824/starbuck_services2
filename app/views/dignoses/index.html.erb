@@ -9,16 +9,15 @@
       <div class="ques"><span class="qNum">Q1　</span>今日はどんな気分？</div>
         <div class="dig-fig-box">
           <ul  class="dig_ul">
-            <li id="0_0" sc="20" <% product="product_furape"%>>フラペチーノ</li>
-            <li id="0_1" sc="15" <% product ="product_coffee"%>>コーヒー系</li>
-            <li id="0_2" sc="10" <% product ="product_tea"%>>紅茶</li>
+            <li id="0_0" sc="20">フラペチーノ</li>
+            <li id="0_1" sc="15">コーヒー系</li>
+            <li id="0_2" sc="10">紅茶</li>
           </ul>
           <div class="fig"><%= image_tag 'fig0.png', class: "fig-image" %></div>
         </div>
     </div>
 
-    <% case product %>
-    <% when 'product_furape' then%>
+    
       <div class="qBox">
         <div class="ques"><span class="qNum">Q2　</span></div>
         <div class="dig-fig-box">
@@ -33,7 +32,6 @@
         </div>
       </div>
    
-    <% when 'product_coffee' then%>  
       <div class="qBox">
           <div class="ques"><span class="qNum">Q3</span>カロリーはオフにする？</div>
           <div class="dig-fig-box">
@@ -45,7 +43,7 @@
           </div>
       </div>
     
-        <% when 'product_tea' then%> 
+        
         <div class="qBox">
             <div id="resultBox">
                 <div id="resultTitle">下へスクロールしてみてね</div>
@@ -57,7 +55,7 @@
                 <div id="resultImage"></div> 
             </div>
         </div>
-      <% end %>
+ 
     </div>
 </div>
 
@@ -183,8 +181,6 @@
 
     $(function(){
         initFunc();//---初期化
-        $.get("result.csv", function(myData){resultArray = myData.split("\r\n")});
-        preloadFunc("lv0.png","lv1.png","lv2.png","lv3.png","lv4.png", "againOn.png");
         $("ul>li").click(quesFunc);
         $("#againButton").click(againFunc);
     });
