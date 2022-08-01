@@ -9,6 +9,16 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   get 'rule', to: 'pages#rule'
   get 'term', to: 'pages#term'
+
+  get 'result1', to: 'dignoses#result1'
+  get 'no_coffee_sweet', to: 'dignoses#no_coffee_sweet'
+  get 'no_coffee_cool', to: 'dignoses#no_coffee_cool'
+  get 'no_coffee_spicy', to: 'dignoses#no_coffee_spicy'
+  get 'coffee_sweet', to: 'dignoses#coffee_sweet'
+  get 'coffee_no_sweet', to: 'dignoses#coffee_no_sweet'
+  get 'coffee_no_milk', to: 'dignoses#coffee_no_milk'
+
+
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 

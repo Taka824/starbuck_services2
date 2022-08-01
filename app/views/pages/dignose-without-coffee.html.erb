@@ -1,0 +1,13 @@
+<div class='dignose-body'>
+  <div class="choose_box">   
+    <div id="q_01" class="fit">
+        <p>質問2 コーヒーなしフラペチーノを選んだあなたへ</p>
+        <ul class="flexbox fw">
+          <li class="even"><%= link_to '甘い',no_coffee_sweet_path%></li>
+          <li class="odd"><%= link_to 'さっぱり', no_coffee_cool_path%></li>
+          <li class="odd"><%= link_to 'スパイシー', no_coffee_spicy_path%></li>
+        </ul>
+    </div>
+  </div>
+  <%= javascript_include_tag "dignose.js" %>
+</div>
