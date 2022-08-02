@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'dignose2', :media => "all"%>
+<div class='dignose-body'>
+  <div class="choose_box container">   
+    <div id="q_01" class="fit dignose-box-out">
+        <div class="dignose-q1">質問1 <span class="today-feel">今日の気分は？？</span></div>
+        <div class='dignose-home-image'>
+          <%= image_tag 'starbucks-dog.jpg', class: 'dignose-image' %>
+        </div>
+        <div class="dignose-box-outline row">
+          <div class="dignose-box col-md-4 col-sm-12"><%= link_to '果物系', result1_path%></div>
+          <div class="dignose-box col-md-4 col-sm-12"><%= link_to 'コーヒー系', page_path('dignose-coffee')%></div>
+          <div class="dignose-box col-md-4 col-sm-12"><%= link_to 'フラペチーノ系', page_path('dignose-without-coffee')%></div>
+        </div>
+    </div>
+  </div>
+</div>

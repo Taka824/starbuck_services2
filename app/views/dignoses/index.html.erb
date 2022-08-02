@@ -1,14 +1,19 @@
-<div class='dignose-body'>
-  <div class="choose_box">   
-    <div id="q_01" class="fit">
-        <p>質問1</p>
-        <ul class="flexbox fw">
-          <li class="even"><%= link_to '果物系', result1_path%></li>
-          <li class="odd"><%= link_to 'コーヒー系', page_path('dignose-coffee')%></li>
-          <li class="odd"><%= link_to 'コーヒーなしフラペチーノ系', page_path('dignose-without-coffee')%></li>
-        </ul>
-    </div>
-  </div>
-  <%= javascript_include_tag "dignose.js" %>
-</div>
+<%= stylesheet_link_tag 'dignoses', :media => "all"%>
+<div class='dignose-box container'>
 
+  <div class='dignose-home-text'>
+    <h2 class="dignose-title">スタ犬くんと一緒に一杯を探そう<i class="fas fa-search"></i></h2>
+    <div class='dignose-content'>
+      スタバに行っても結局、いつも同じ注文ばかりしている...
+      たまには違う注文もしてみたいと、お悩みの方へ。<br>
+      簡単な診断アプリを作成しました。
+      5~15秒の質問に答えるだけで、今日の気分に合わせて、
+      一杯を決めることができます。
+    </div>
+    <div class="dignose-button"><%= link_to '早速診断してみる', page_path('dignose'), class: 'btn'%></div>
+  </div>
+  
+  <div class='dignose-home-image'>
+    <%= image_tag 'starbucks-dog.jpg', class: 'dignose-image' %>
+  </div>
+</div>

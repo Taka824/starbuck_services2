@@ -1,3 +1,64 @@
-// Place all the styles related to the dignoses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.dignose-box{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 1rem;
+    .dignose-home-text{
+        width: 50vw;
+        margin-bottom: 0;
+        max-width: 700px;
+        .dignose-title{
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0.25em 1em;
+            border-bottom: solid 2px black;
+        }
+        .dignose-content{
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .dignose-button{
+            margin: 0 auto;
+            .btn{
+                outline: none;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                padding: 10px 10px 10px 5px;
+                width: 230px;
+                text-align: center;
+                border-radius: 30px;
+                font-weight: 700;
+                color: #fff;
+                background: #047655;
+                box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #fff;
+                transition: all 0.5s;
+                &:hover{
+                    background: #b8e8be;
+                }
+                &:active{
+                    background: #a6ffb2;
+                }
+            }
+        }
+    }
+    .dignose-image{
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px){
+    .dignose-box{
+        flex-direction: column-reverse;
+        .dignose-home-text{
+            margin-bottom: 2rem;
+        }
+    }
+}
