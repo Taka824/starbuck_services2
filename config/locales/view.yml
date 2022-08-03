@@ -112,6 +112,8 @@ ja:
       show:
         title: '記事タイトル'
         body: '記事の内容'
+        category: '記事カテゴリー'
+        name: '記事作成者'
       new:
         title: '記事作成'
         body: '記事の内容作成'

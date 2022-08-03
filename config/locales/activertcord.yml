@@ -43,6 +43,8 @@ ja:
         title: '記事編集'
       show:
         title: '記事詳細'
+        category: '記事カテゴリー'
+        name: '記事作成者'
   likes:
     create:
       success: 'いいね成功'

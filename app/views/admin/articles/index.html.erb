@@ -1,9 +1,21 @@
-<%= link_to t('defaults.new'), new_admin_article_path, class: 'btn btn-info' %><br>
-<%= @articles.each do |article| %>
-  <%= article.id %>
-  <%= link_to article.title, admin_article_path(article) %>
-  <%= article.body %>
-  <%= link_to t('defaults.show'), admin_article_path(article), class: 'btn btn-info' %>
-  <%= link_to t('defaults.edit'), edit_admin_article_path(article), class: 'btn btn-success' %>
-  <%= link_to t('defaults.delete'), admin_article_path(article), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
-<% end %>
+<div class='container'>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><%= Post.human_attribute_name(:id) %></th>
+            <th scope="col"><%= Post.human_attribute_name(:title) %></th>
+            <th scope="col"><%= Post.human_attribute_name(:category) %></th>
+            <th scope="col">作成者</th>
+            <th scope="col"><%= Post.human_attribute_name(:created_at) %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @articles %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= link_to t('defaults.new'), new_admin_article_path, class: 'btn btn-info' %><br>
+</div>
