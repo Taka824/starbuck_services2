@@ -1,19 +1,58 @@
+/* 表示しているページ番号のデザイン */
+.pagination{
+  justify-content: center;
+  display: flex;
+  
+  a {     
+      border-radius: 50%;
+      padding-top: 4px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin: 0 6px;
+  }
+}
+
 .pagination>li>a {          
-    border: none;     /*枠線をなくす*/
-    color: #696969;   /*文字の色を変える*/
-  }
-  
-  /* 表示しているページ番号のデザイン */
-  .pagination{
-      .active{
-            a {     
-                background: #047655;     /*背景の色を変える*/
-                border-radius: 15px;     /*角を丸くする*/
-            }
-  }
-  }
-  
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}  
   /*ホバー時のデザイン*/
-  .pagination>li>a:hover {        
-    border-radius: 15px;    /*角を丸くする*/
+.pagination>li>a:hover {        
+  background: #047655;     /*背景の色を変える*/
+  color: white;
+}
+
+.pagination > li:first-child > a{
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.pagination > li:first-child > span {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.page-item:first-child .page-link {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.pagination > li:last-child > a{
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.pagination > li:last-child > span {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.page-item:last-child .page-link {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #047655;
+  &:hover{
+    background-color: #047655;
   }
+}
