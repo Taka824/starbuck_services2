@@ -1,7 +1,7 @@
-<%= stylesheet_link_tag 'article-show', :media => "all"%>
+<%= stylesheet_link_tag 'admin-article', :media => "all"%>
 <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 overflow">
         <h1><%= t('.title') %></h1>
         <div class="text-right mb-3">
           <%= link_to t('defaults.edit'), edit_admin_article_path(@article), class: 'btn btn-success' %>
@@ -22,7 +22,7 @@
         </tr>
         <tr>
           <th scope="row"><%= Article.human_attribute_name(:body) %></th>
-          <td><%= @article.body %></td>
+          <td><%= @article.body%></td>
         </tr>
         <tr>
           <th scope="row"><%= Article.human_attribute_name(:name) %></th>
