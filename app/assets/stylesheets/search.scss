@@ -63,8 +63,9 @@
         transition: 0.6s;
         box-sizing: content-box;
         border-radius: 20px;
-        width: 270px;
         justify-content: center;
+        background: #047655;
+        width: 270px;
         .search-txt-box{
             .search-txt{
                 border-radius: 10px;
@@ -75,40 +76,6 @@
                 background: #047655;
                 color: white;
             } 
-        }
-    
-        .search-txt-box{
-            .search-txt{
-                border: none;
-                background: none;
-                outline: none;
-                float: left;
-                padding: 0;
-                color: black;
-                font-size: 16px;
-                transition: 0.4s;
-                width: 0px;
-            }
-        }
-        .search-btn-box{
-            position: relative;
-            .fa-search{
-               color: white; 
-               float: right;
-               width: 40px;
-               height: 40px;
-               border-radius: 50%;
-               background-color: #047655;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               z-index: 15;
-            }
-            .search-btn{
-                position: absolute;
-                top: 0;
-                opacity: 0;
-            }
         }
     }
 } 
