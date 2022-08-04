@@ -12,9 +12,7 @@
         <div class="card-body">
           <div class='row'>
             <div class='col-md-7'>
-              <% @post.images.each do |image| %>
-                <li><%= image_tag image.url, class: 'card-img-top swiper-slide-post', size: '300x300' %></li>
-              <% end %>
+              <%= image_tag @post.image_url, class: 'card-img-top', size: '300x300' %>
               <h4 class="card-title category-box">
                 <span class="category-content">
                   <% if @post.category == "あっさり系" %>
