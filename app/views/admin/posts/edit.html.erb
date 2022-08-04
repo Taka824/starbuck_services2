@@ -28,9 +28,7 @@
         <div class="form-group">
           <%= f.label :images %>
           <%= f.file_field :images, class: 'form-control', rows: 10, multiple: true, accept: 'image/*' %>
-          <% @post.images.each do |image| %>
-            <%= hidden_field :post, :images, multiple: true, value: image.identifier %>
-          <% end %>
+          <%= image_tag @post.image.url, id: :img_prev, size: '200x200' %>
         </div>
         <div class="form-group" id="star">
           <%= f.label :evaluation, class:"" %>

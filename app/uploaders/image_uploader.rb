@@ -1,7 +1,5 @@
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-  process resize_to_fill: [300, 300]
-  
+
   storage :file
   
   def store_dir
