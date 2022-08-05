@@ -2,7 +2,7 @@
     height: 100vh;
 }
 .login__width{
-    margin: 30px auto 10px auto;
+    margin: 60px auto 60px auto;
     width: 50%;
     max-width: 430px;
     min-width: 300px;
@@ -30,6 +30,7 @@
             font-size: 20px;
             padding-top: 24px;
             letter-spacing: 0.5px;
+            color: rgb(114, 89, 81);
         }
     }
     .form-group{
@@ -38,11 +39,17 @@
             outline: none;
             background: none;
             margin: 30px 0;
-            color: black;
+            color: rgb(114, 89, 81);
             padding: 20px 10px 20px 5px;
             border-radius: 25px;
             box-shadow: inset 3px 3px 3px #cbced1,
             inset -3px -3px 3px #fff;
+        }
+        .profile-detail-box{
+            text-align: center;
+            .profile-detail-content{
+                font-size: 8px;
+            }
         }
     }
     .login__button{
@@ -94,6 +101,12 @@
     box-shadow: 1px 1px 3px #bdbecc,
                 -3px -3px 6px #ffffff73;
     text-align: center;
+    .profile-detail-box{
+        padding-top: 12px;
+        .profile-detail-content{
+            font-size: 6px;
+        }
+    }
 }
 
 
@@ -102,6 +115,30 @@
     .text-center{
         .return-link{
             margin-top: 20px;
+        }
+    }
+}
+
+
+// edit profile
+.edit-form-group{
+    color: rgb(114, 89, 81);
+    font-size: 8px;
+    font-weight: normal;
+}
+.login__width{
+    .logo-div{
+        .profile-avatar-edit{
+            text-align: center;
+            .form-control{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .login__button{
+            .btn{
+            font-weight: normal;
         }
     }
 }
