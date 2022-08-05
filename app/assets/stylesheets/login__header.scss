@@ -30,7 +30,7 @@
                     .header__li{
                         text-decoration: none;
                         margin-left: 20px;
-                        color: black;
+                        color: rgb(114, 89, 81);
                     }
                     .li-avatar{
                         margin-left: 20px;
@@ -38,66 +38,8 @@
 
                     .header__li__avatar{
                         text-decoration: none;
-                        color: black;
+                        color: rgb(114, 89, 81);
                     }
-
-                    // .liquid-li{
-                    //     &:hover{ 
-                    //         .liquid{
-                    //         top: -120px;
-                    //     }
-                    // }
-                    // .header-liquid-li{
-                    //     text-decoration: none;
-                    //     position: relative;
-                    //     text-align: center;
-                    //     text-transform: uppercase;
-                    //     display: block;
-                    //     padding: 20px 50px;
-                    //     width: 150px;
-                    //     overflow: hidden;
-                    //     background: #974218;
-                    //     .liquid-span{
-                    //         position: relative;
-                    //         z-index: 10;
-                    //         position: absolute;
-                    //         left: 0;
-                    //         top: -100px;
-                    //         width: 200px;
-                    //         height: 200px;
-                    //         background-repeat: white;
-                    //         box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-                    //         transition: 0.5s;
-                    //     }
-                    //     .liquid{
-                    //         background: #4973ff;
-                    //     }
-                    //     .liquid:hover{
-                    //         top: -300px;
-                    //     }                    
-                    //     .liquid::before,
-                    //     .liquid::after{
-                    //         content: '';
-                    //         position: absolute;
-                    //         width: 200px;
-                    //         height: 200px;
-                    //         top: 0;
-                    //         left: 50%;
-                    //         transform: translate(-50%, -75%);
-                    //         background: #4973ff;
-                    //     }
-                    //     .liquid::before{
-                    //         border-radius: 45%;
-                    //         background: white;
-                    //         animation: animate 5s linear infinite;
-                    //     }
-                    //     .liquid::after{
-                    //         border-radius: 40%;
-                    //         background: white;
-                    //         animation: animate 10s linear infinite;
-                    //     }
-                    // }
-                // }
             }
         }
     }
@@ -105,16 +47,6 @@
 .login-mobile-menu-icon{
     display: none;
 }
-// @keyframes animate{
-//     0%
-//     {
-//         transform: translate(-50%, -75%) rotate(0deg);
-//     }
-//     100%
-//     {
-//         transform: translate(-50%, -75%) rotate(360deg);
-//     }
-// }
 
 @media(max-width: 620px){
   .header__nav{
@@ -126,8 +58,8 @@
       border: none;
       cursor: pointer;
       & > span {
-          background-color: black;
-          color: black;
+          background-color: rgb(114, 89, 81);
+          color: rgb(114, 89, 81);
           width: 35px;
           height: 2px;
           display: block;
@@ -146,7 +78,7 @@
       }
       & .login-mobile-menu-icon{
         & > span {
-            background-color: black;
+            background-color: rgb(114, 89, 81);
             &:nth-child(1) {
                 transform: translateY(11px) rotate(-405deg);
             }
@@ -167,16 +99,6 @@
         transition: all 0.5s;
         background-color: rgb(249, 255, 244);
         z-index: 15;
-        // .mobile-menu__cover{
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: rgba(0, 0, 0, 0.3);
-        //     opacity: 0;
-        //     visibility: hidden;
-        // }
     }
     .mobile-header__nav{
         position: fixed;
@@ -188,11 +110,12 @@
             perspective: 2000px;
             transform-style: preserve-3d;
             list-style: none;
+            margin-right: 4px;
             .mobile-header__li{
                 transform: translate3d(0, 0, -1000px);
                 transition: transform 0.3s, opacity 0.2s;
                 text-decoration: none;
-                color: black;
+                color: rgb(114, 89, 81);
             }
         }
     }

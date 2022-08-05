@@ -7,17 +7,23 @@
   </div>
   <div class="logo-div">
     <div class="form-group avatar-show">
-      <%= image_tag current_user.avatar.url, size: '50x50', class: 'rounded-circle' %>
-      <%= t('.avatar') %>
+      <div class="profile-detail-box mt-5">
+        <%= image_tag current_user.avatar.url, size: '50x50', class: 'rounded-circle' %>
+        <div class="profile-detail-content mt-2 "><%= t('.avatar') %></div>
+      </div>
     </div>
   </div>
   <div class="form-group form-float">
-    <%= t('.email') %><br>
-    <div class="mt-0"><%= current_user.email%></div>
+    <div class="profile-detail-box">
+      <span class="profile-detail-content"><%= t('.email')%></span>:
+      <span class="mt-0"><%= current_user.email%></span>
+    </div>
   </div>
-  <div class="form-group form-float">   
-    <%= t('.name') %><br>
-    <div class="mt-0"><%= current_user.name%></div>
+  <div class="form-group form-float">
+    <div class="profile-detail-box"> 
+      <span class="profile-detail-content"><%= t('.name') %></span>:
+      <span class="mt-0"><%= current_user.name%></span>
+    </div>
   </div>          
   <div class="actions text-center login__button"> 
     <%= link_to t('defaults.edit'), edit_profile_path, class: 'btn'%>

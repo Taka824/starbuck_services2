@@ -8,23 +8,27 @@
   <%= form_with model: @user, url: profile_path, method: :patch, local: true do |form| %>
     <%= render 'shared/error_messages', object: form.object %>
     <div class="logo-div">
-      <div class="form-group">
-        <%= image_tag @user.avatar.url , size: '50x50', class: 'rounded-circle logo', style: "margin: 0" %>
-        <%= form.label :avatar %>
+      <div class="form-group profile-avatar-edit mt-5">
+        <%= image_tag @user.avatar.url , size: '50x50', class: 'rounded-circle logo', style: "margin: 0" %><br>
+        <%= form.label :avatar,class: 'edit-form-group' %>
         <%= form.file_field :avatar, class: "form-control", accept: 'image/*', onchange: 'previewFileWithId(preview)',style: "padding: 8px 3px 10px 20px" %>
         <%= form.hidden_field :avatar_cache %>
       </div>
     </div>
     <div class="form-group">
-      <%= form.label :email, User.human_attribute_name(:email), style: "margin: 0"%>
-      <%= form.text_field :email, class: "form-control", style: "margin: 0" %>
+      <div class="profile-detail-box-edit"> 
+        <%= form.label :email, User.human_attribute_name(:email),class: 'edit-form-group', style: "margin: 0"%>
+        <%= form.text_field :email, class: "form-control", style: "margin: 0" %>
+      </div>
     </div>
     <div class="form-group">
-      <%= form.label :name, User.human_attribute_name(:name),style: "margin: 0" %>
-      <%= form.text_field :name,class: "form-control",style: "margin: 0" %>
+      <div class="profile-detail-box-edit"> 
+        <%= form.label :name, User.human_attribute_name(:name),class: 'edit-form-group', style: "margin: 0" %>
+        <%= form.text_field :name,class: "form-control",style: "margin: 0" %>
+      </div>
     </div>
-    <div class="actions text-center login__button">
-      <%= form.submit '送信',class: "btn btn-primary mb-3" %>
+    <div class="actions text-center login__button mt-5">
+      <%= form.submit '送信',class: "btn btn-primary mb-2" %>
       <%= link_to '戻る', profile_path, class: 'user-information return-link'%>
     </div>
   <% end %>

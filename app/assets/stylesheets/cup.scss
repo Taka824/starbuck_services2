@@ -244,9 +244,26 @@
 
 @media (max-width: 1000px){
     .hero_3{
+        h1{
+            font-size: 26px;
+        }
         .main{
             .card-box{
                 margin: 5px;
+                .card-body{
+                    h5{
+                      font-size: 17px;
+                    }
+                    .card-text{
+                        font-size: 13px;
+                    }
+                    i{
+                        font-size: 35px;
+                    }
+                    .btn{
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
@@ -278,7 +295,7 @@
         color: #725951;
         position: absolute;
         top: 5%;
-        left: 18%;
+        left: 29%;
         font-size: 28px;
     }
     .sentence2{
@@ -287,6 +304,7 @@
         top: 15%;
         right: 2%;
         font-size: 26px;
+        left: 1%;
     }
     .cup{
         width: 225px;
