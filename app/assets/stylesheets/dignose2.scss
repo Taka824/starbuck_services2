@@ -4,6 +4,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
     min-height: 100vh;
     height: 100%;
+    color: rgb(114, 89, 81);
   }
   .dignose-box{
     margin: 20px 0;
@@ -13,7 +14,7 @@
     display: inline-block;
     margin-bottom: 20px;
     padding: 0.25em 1em;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px rgb(114, 89, 81);
   }
   .today-feel{
     margin-left: 3rem;
@@ -22,11 +23,10 @@
   .choose_box a {
     color: #fff;
     display: block;
-    padding: 20px 60px;
+    padding: 20px 40px;
     text-align: center;
     background-color: #047655;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: normal;
     border: 2px solid #047655;
     text-decoration: none;
     -webkit-border-radius: 6px;
@@ -47,4 +47,24 @@
     display: block;
     margin: 0 auto;
 }
-  
+
+@media (max-width: 600px){
+  .today-feel{
+    font-size: 23px;
+  }
+  .dignose-home-image{   
+      .dignose-image{
+          width: 300px;
+          display: block;
+          margin: 0 auto;
+      }
+  }
+  .dignose-box-outline{
+    text-align: center;
+    .dignose-box{
+      width: 300px;
+      font-size: normal;
+      margin: 8px auto;
+    }
+  }
+}
