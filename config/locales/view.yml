@@ -57,13 +57,15 @@ ja:
       title: 'いいね一覧'
       no_result: 'いいねをまだつけていません'
     new:
-     title: '投稿作成'
+     title: '新規作成'
      arrange_content: 'アレンジ内容'
     bookmarks:
       title: 'ブックマーク一覧'
     show:
       title: '投稿の詳細'
       body: 'コメント'
+    edit:
+      title: '編集'
   articles:
     title: '記事'
   categories:

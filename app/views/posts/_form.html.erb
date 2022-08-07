@@ -2,59 +2,76 @@
 <div class="post__width">
   <div class="logo-div">
     <div class="logo"><%= image_tag 'starbuck.png', class: 'login-image' %></div>
-    <div class="title">投稿しよう</div>
+    <div class="title"><%= t('.title') %></div>
   </div>
   <%= form_with model: post, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <div class="post-form-box"> 
+      <%= f.label :title, class: 'form-content'  %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :arrange_content, class: 'form-content' %>
-    <%= f.text_area :arrange_content, class: 'form-control', size: "20x10" %>
+    <div class="post-form-box"> 
+      <%= f.label :arrange_content, class: 'form-content' %>
+      <%= f.text_area :arrange_content, class: 'form-control', size: "20x10" %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :price, class: 'form-content'%>
-    <%= f.number_field :price, class: 'form-control', rows: 10 %>
+    <div class="post-form-box"> 
+      <%= f.label :price, class: 'form-content'%>
+      <%= f.number_field :price, class: 'form-control', rows: 10 %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :one_point, class: 'form-content'%>
-    <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
+    <div class="post-form-box"> 
+      <%= f.label :one_point, class: 'form-content'%>
+      <%= f.text_field :one_point, class: 'form-control', rows: 10 %>
+    </div>
   </div>
   <% if current_user.admin? %>
     <div class="form-group">
-      <%= f.label :admin_category, '管理者カテゴリー', class: 'form-content'%><br>
-      <%= f.select :admin_category, {'管理者': "管理者", '現役スタバ店員': '現役スタバ店員','元スタバ店員': '元スタバ店員','スタ犬くん': 'スタ犬くん'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: true } %>
+      <div class="post-form-box"> 
+        <%= f.label :admin_category, '管理者カテゴリー', class: 'form-content'%><br>
+        <%= f.select :admin_category, {'管理者': "管理者", '現役スタバ店員': '現役スタバ店員','元スタバ店員': '元スタバ店員','スタ犬くん': 'スタ犬くん'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: true } %>
+      </div>
     </div>
      <div class="form-group">
-      <%= f.label :dignose_category, '管理者カテゴリー/診断メニューへ飛ばされます', class: 'form-content'%><br>
-      <%= f.select :dignose_category, {'おすすめ1': "おすすめ1", 'おすすめ2': 'おすすめ2','おすすめ3': 'おすすめ3'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: false } %>
+      <div class="post-form-box"> 
+        <%= f.label :dignose_category, '管理者カテゴリー/診断メニューへ飛ばされます', class: 'form-content'%><br>
+        <%= f.select :dignose_category, {'おすすめ1': "おすすめ1", 'おすすめ2': 'おすすめ2','おすすめ3': 'おすすめ3'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: false } %>
+      </div>
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :category, 'カテゴリー', class: 'form-content'%><br>
-    <%= f.select :category, {'あっさり系': "あっさり系", 'さっぱり系': 'さっぱり系','甘い系': '甘い系','カロリーオフ系': 'カロリーオフ系'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: true } %>
+    <div class="post-form-box"> 
+      <%= f.label :category, 'カテゴリー', class: 'form-content'%><br>
+      <%= f.select :category, {'あっさり系': "あっさり系", 'さっぱり系': 'さっぱり系','甘い系': '甘い系','カロリーオフ系': 'カロリーオフ系'}, { include_blank: '選択してください'}, { class: 'form-control-category' , required: true } %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :image, class: 'form-content'%>
-    <%= f.file_field :image, class: 'form-control mb-3',id: :user_img, accept: 'image/*' %>
+    <div class="post-form-box"> 
+      <%= f.label :image, class: 'form-content'%>
+      <%= f.file_field :image, class: 'form-control mb-3',id: :user_img, accept: 'image/*' %>
+    </div>
     <%= f.hidden_field :image_cache %>
   </div>
-  <div class='mt-3 mb-3'>
+  <div class='mt-3 mb-3 post-image-group'>
     <% if post.image.present? %>
-      <%= image_tag post.image.url, id: :img_prev, size: '200x200' %>
+      <%= image_tag post.image.url, id: :img_prev,class: 'post-image', size: '200x200' %>
     <% else %>
-      <%= image_tag "starbucks.jpeg", id: :img_prev, size: '200x200' %>
+      <%= image_tag "starbucks.jpeg", id: :img_prev,class: 'post-image', size: '200x200' %>
     <% end %>
   </div>
   
   <div class="form-raty">
     <div class="form-raty-content", id="star">
-      <%= f.label :evaluation, class:"" %>
+      <%= f.label :evaluation, class:"form-content" %><br>
       <%= f.hidden_field :evaluation, id: :review_star %>
     </div>
   </div>
+
   <div class="actions text-center post__button">
     <%= f.submit class: 'btn btn-primary post-btn' %>
   </div>

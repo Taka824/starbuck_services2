@@ -2,9 +2,10 @@
     .footer-box{
         display: flex;
         justify-content: space-between;
+        color:  rgb(114, 89, 81);
         .logo{
             .footer__image{
-                width: 60px;
+                width: 50px;
                 margin-top: 14px;
             }
         }
@@ -22,7 +23,7 @@
                     margin-left: 15px;
                     text-align: center;
                     text-decoration: none;
-                    color: black;
+                    color: rgb(114, 89, 81);
                     justify-content: center;
                 }
             }
@@ -30,6 +31,32 @@
     }
     .footer__copyright{
         text-align: center;
-        padding: 20px 0;
+        color: rgb(114, 89, 81);
+        padding: 10px 0;
     }
+}
+
+@media(max-width: 620px){
+.footer{
+    .footer-box{
+        .logo{
+            display: none;
+        }
+        .footer__nav{
+            font-size: 8px;
+            width: 100%;
+            .footer__ul{
+                justify-content: center;
+                margin: 0px 28px 0 10px;
+                .footer__li__content{
+                    margin: 0px 15px;
+                }
+            }
+        }
+    }
+  }
+    .footer__copyright{
+        padding-top: 5px;
+        font-size: 12px;  
+    }  
 }

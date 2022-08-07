@@ -26,8 +26,8 @@
         opacity: 0;
     }
     & .default {
-        background-color: white;
-        color: black;
+        background-color: transparent;
+        color:  rgb(114, 89, 81);
         transform: rotateX(0);
         transform-origin: center center -25px;
         opacity: 1;
