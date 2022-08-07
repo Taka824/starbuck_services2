@@ -1,15 +1,20 @@
-<div class="col-sm-6 col-lg-4 col-xs-12 mb-3 card-outline article-card">  
-  <div id="article-id-<%= article.id %>">
-    <%= link_to(article_path(article), class: 'list-content') do %> 
-      <figure class="article-image">
-        <%= image_tag article.article_image_url, class: 'card-img-top', size: '300x300' %>
-      </figure>
-      <div class="article-content">
-        <div class="card-category">カテゴリー<%= article.category%></div>
-        <h3 class="card-title"><%= article.title %></h3>
-        <p class="card-excerpt"><%= article.summary %></p>
-      </div>  
-    <% end %>
+<%= stylesheet_link_tag 'article-category', :media => "all"%>
+<div class="col-sm-6 col-lg-4 col-xs-12 mb-3 card-outline">  
+  <div id="article-id-<%= article.id %>"> 
+      <div class="card">
+        <div class='card-body'>
+        <%= link_to(article_path(article), class: 'list-content') do %>
+          <figure class="article-image">
+            <%= image_tag article.article_image_url, class: 'card-img-top', size: '300x300' %>
+          </figure>
+        <% end %>
+          <div class="article-content-box">
+            <div class="card-category"><i class="fas fa-star mr-star"></i>カテゴリー <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-1'><%= article.category %></span></span></span></div>
+            <%= link_to(article_path(article), class: 'list-content') do %><h3 class="card-title"><i class="fas fa-mug-hot mr-mug"></i><%= article.title%></h3><% end %>
+            <p class="card-excerpt"><i class="fas fa-comment mr-com"></i><%= article.summary%></p>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 

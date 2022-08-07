@@ -2,11 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <div class="row">
       <% if @articles.present? %>
         <%= render @articles %>
       <% else %>
         <p><%= t('.no_result') %></p>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
