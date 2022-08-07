@@ -6,9 +6,10 @@
 }
 .like-count{
     color: #f9004d;
-    text-decoration: none;
     &:hover{
         color: #ff6a99;
+    }
+    a{
         text-decoration: none;
     }
 }
