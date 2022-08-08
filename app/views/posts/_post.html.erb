@@ -5,7 +5,9 @@
   <div id="post-id-<%= post.id %>">
     <div class="card">
       <div class="card-body">
-        <%= image_tag post.image_url, class: 'card-img-top', size: '300x300' %>
+        <%= link_to(post_path(post), class: 'list-content') do %>
+          <%= image_tag post.image_url, class: 'card-img-top', size: '300x300' %>
+        <% end %>
         <h4 class="card-title category-box">
           <span class="category-content">
             <% if post.category == "あっさり系" %>
@@ -52,7 +54,7 @@
           </div>
         </div>
         <div class="post-title">
-          <i class="fas fa-coffee"></i><span class="arange-title"></span><%= link_to post.title, post_path(post), class: 'post-title-content' %>
+          <%= link_to(post_path(post), class: 'list-content') do %><i class="fas fa-coffee"></i><span class="arange-title"></span><%= link_to post.title, post_path(post), class: 'post-title-content' %><%end%>
         </div>
         <span class="created-time">
             <%= l post.created_at, format: :long %>

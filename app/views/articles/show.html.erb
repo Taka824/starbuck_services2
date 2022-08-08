@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'article-show', :media => "all"%>
+<%= stylesheet_link_tag 'article-category', :media => "all"%>
 <div class="container article-container">
 <div class="article-card-box">
 <article class="article-card">
@@ -6,7 +7,7 @@
       <%= image_tag @article.article_image_url, class: 'card-img-top', size: '300x300' %>
     </figure>
       <div class="article-content">
-        <div class="card-category"><i class="fas fa-star mr-star"></i>カテゴリー<%= @article.category%></div>
+        <div class="card-category"><i class="fas fa-star mr-star"></i>カテゴリー <span class='category-out category-1-out'><span class="category-in"><span class = 'category category-1'><%= @article.category %></span></span></span></div>
         <h3 class="card-title"><i class="fas fa-mug-hot mr-mug"></i><%= @article.title %></h3>
         <p class="card-excerpt"><i class="fas fa-comment mr-com"></i><%= @article.summary %></p>
         <div class="card-body"><i class="fas fa-book-open"></i><%= @article.body %></div>

@@ -1,9 +1,13 @@
 .comment-box{
     margin-top: 15px;
     margin-bottom: 15px;
+    color: rgb(114, 89, 81);
     .comment{
         box-shadow: 0px 1px 4px 0.5px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
+        .form-control{
+            color: rgb(114, 89, 81);
+        }
         &:hover{
             box-shadow: inset 0 0 3px 4px rgba(0, 0, 0, 0.3);
         }
@@ -68,7 +72,8 @@ padding: 10px;
 max-width: 100%;
 border-radius: 12px;
 background: #fff;
-box-shadow: -5px 4px 12px 1px #dadada,
+box-shadow: -5px 4px 12px 1px #dadada;
+color: rgb(114, 89, 81);
 }
 
 .says:after {
@@ -86,11 +91,18 @@ transform: rotate(35deg);
 margin: 0;
 padding: 0;
 overflow-wrap: break-word;
+color: rgb(114, 89, 81);
 }
 .show-icon{
     margin-right: 1rem;
 }
-  
+
+.fa{
+    color: rgb(114, 89, 81);
+}
+.small{
+    color: rgb(114, 89, 81);
+}
 
 @media screen and (max-width: 1200px){
     .says p {

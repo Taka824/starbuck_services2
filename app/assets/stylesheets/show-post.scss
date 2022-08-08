@@ -3,6 +3,7 @@ li{
 }
 .card{
     box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3);
+    color: rgb(114, 89, 81);
     &:hover{
         box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, 0.3);
     }
@@ -10,12 +11,18 @@ li{
         position: relative;
         .category-box{
             margin: 5px 0;
-            color: black;
+            color: rgb(114, 89, 81);
             .category-content{
                 position: absolute;
                 top: 10px;
                 right: 15px;
             }
+        }
+        .title-box{
+            margin-top: 24px;
+        }
+        .show-content{
+            display: flex;
         }
         .post-information{
             margin: 5px 0 0 0;
@@ -53,13 +60,13 @@ li{
             margin-top: 10px;
 
             .post-one_point{
-                color: black;
+                color: rgb(114, 89, 81);
                 .one_point{
                     margin-right: 5px;
                 }
             }
             .post-price{
-                color: black;
+                color: rgb(114, 89, 81);
                 margin: 10px 0;
                 .price{
                     margin-right: 5px;
@@ -77,6 +84,10 @@ li{
     display: flex;
     justify-content: space-between;
 }
+.fas{
+    color: rgb(114, 89, 81);
+}
+
 
 @media screen and (min-width:800px) {
     .card{
@@ -84,21 +95,23 @@ li{
             .d-inline{
                 margin-top: 10px;
             }
-            .post-information{
-                margin-top: 40px;
-            }
         }
         .show-content{
             margin-top: 30px;
             display: flex;
-            
         }
     }
     .user-information-like{
         position: absolute;
         bottom: 0;
-        right: 6px;
         display: flex;
         justify-content: space-between;
+        .profile-carender-box{
+            margin-left: 1.5rem;
+        }
+
+    }
+    .title-information-box{
+        flex-direction: column;
     }
 }

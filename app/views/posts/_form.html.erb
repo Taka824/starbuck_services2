@@ -2,7 +2,7 @@
 <div class="post__width">
   <div class="logo-div">
     <div class="logo"><%= image_tag 'starbuck.png', class: 'login-image' %></div>
-    <div class="title"><%= t('.title') %></div>
+    <div class="title">投稿作成</div>
   </div>
   <%= form_with model: post, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>

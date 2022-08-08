@@ -46,7 +46,7 @@
             </div>
             <div class='col-md-5'>
               <div class='title-information-box'>
-                <h3 class="d-inline"><span class='show-title'><i class="fas fa-coffee show-icon"></i></span><%= @post.title %></h3>
+                <h4 class="d-inline title-box"><span class='show-title'><i class="fas fa-coffee show-icon"></i></span><%= @post.title %></h4>
                 <div class="post-information">
                   <div class="raty-price">
                     <div class="post-evaluation" data-score="<%= @post.evaluation %>"></div>
@@ -67,7 +67,7 @@
                     <%  end %>
                   <% end %>
                 </div>
-                <ul class="list-inline">
+                <ul class="list-inline profile-carender-box">
                   <li class="list-inline-item"><%= image_tag @post.user.avatar.url, class: 'rounded-circle show-icon', size: '20x20' %><%= @post.user.name %></li>
                   <li class="list-inline-item"><i class="far fa-calendar-alt show-icon"></i><%= l @post.created_at, format: :long  %></li>
                 </ul>
