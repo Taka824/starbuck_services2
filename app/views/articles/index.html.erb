@@ -1,12 +1,15 @@
 <%= stylesheet_link_tag 'article', :media => "all"%>
-<div class="container">
+<%= stylesheet_link_tag 'article-category', :media => "all"%>
+<div class="container article-container">
   <div class="row">
     <div class="col-12">
+      <div class="row">
       <% if @articles.present? %>
         <%= render @articles %>
       <% else %>
         <p><%= t('.no_result') %></p>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
