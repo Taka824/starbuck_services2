@@ -23,6 +23,9 @@
   bottom:10px;
   left:50%;
 }
+.dignose-image{
+  width: 600px;
+}
 
 /*Scrollテキストの描写*/
 .scrolldown2 span{
@@ -123,12 +126,19 @@ h1{
   padding:600px 0;
   text-align: center;
 }
-
+@media (max-width: 1000px){
+  .dignose-image{
+    width: 300px;
+  }
+}
 @media screen and (max-width:768px){
 
     #header,
     #header:before{
   height: 90vh;    
+    }
+    .dignose-image{
+      width: 600px;
     }
     
 }
